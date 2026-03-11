@@ -21,7 +21,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contacts" className="bg-gradient-to-b from-[#FFF8F1] to-white py-20 md:py-28">
+    <section id="contacts" className="bg-linear-to-b from-[#FFF8F1] to-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         {/* MODERN SECTION HEADER */}
@@ -47,7 +47,7 @@ export default function ContactSection() {
 
               <div className="space-y-6 mb-10">
                 <div className="flex items-start gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                  <div className="shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
                     <span className="text-2xl">📍</span>
                   </div>
                   <div>
@@ -57,7 +57,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                  <div className="shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
                     <span className="text-2xl">☎</span>
                   </div>
                   <div>
@@ -67,7 +67,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                  <div className="shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
                     <span className="text-2xl">✉</span>
                   </div>
                   <div>
@@ -77,7 +77,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                  <div className="shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
                     <span className="text-2xl">🕒</span>
                   </div>
                   <div>

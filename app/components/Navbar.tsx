@@ -59,7 +59,7 @@ export default function Navbar() {
           </Link>
 
           {/* DESKTOP MENU */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-base font-medium tracking-wide text-white">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-lg font-bold tracking-wide text-white">
             <Link
               href="/#home"
               className="relative px-3 py-2 hover:text-white transition-colors duration-200 group whitespace-nowrap"
@@ -133,7 +133,7 @@ export default function Navbar() {
             {/* DESKTOP LANGUAGE BUTTON */}
             <div className="hidden lg:flex ml-4">
               <button className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-white/30 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl border border-white/30 relative overflow-hidden group">
-                <span className="relative z-10">PT/EN</span>
+                <span className="relative z-10">UKR/EN</span>
                 <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-300"></span>
               </button>
             </div>
@@ -191,7 +191,7 @@ export default function Navbar() {
           lg:hidden p-4 xs:p-5 sm:p-6 md:p-8
         `}
       >
-        <nav className="flex flex-col gap-2 text-base md:text-lg font-semibold tracking-wide text-white overflow-y-auto h-full pb-4">
+        <nav className="flex flex-col gap-2 text-lg md:text-xl font-bold tracking-wide text-white overflow-y-auto h-full pb-4">
           <Link
             href="/#home"
             onClick={() => setOpen(false)}

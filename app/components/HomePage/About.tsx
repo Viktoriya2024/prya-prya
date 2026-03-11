@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-28 bg-gradient-to-b from-[#FFF8F1] to-white w-full">
+    <section id="about" className="py-20 md:py-28 bg-linear-to-b from-[#FFF8F1] to-white w-full">
       <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-12">
         
         {/* TITLE WITH MODERN STYLING */}

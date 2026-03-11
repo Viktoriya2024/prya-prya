@@ -35,9 +35,9 @@ export default function Hero() {
         
         {/* Decorative Top Element */}
         <div className="mb-6 flex items-center gap-3">
-          <div className="w-12 h-[2px] bg-linear-to-r from-transparent via-orange-300 to-orange-300 rounded-full" />
-          <span className="text-orange-200 text-sm md:text-base font-light tracking-[0.3em] uppercase">З любов'ю створено</span>
-          <div className="w-12 h-[2px] bg-linear-to-l from-transparent via-orange-300 to-orange-300 rounded-full" />
+          <div className="w-12 h-0.5 bg-linear-to-r from-transparent via-orange-400 to-orange-300 rounded-full" />
+          <span className="text-orange-300 text-sm md:text-base drop-shadow-md font-bold tracking-[0.5em] uppercase">З любов'ю створено</span>
+          <div className="w-12 h-0.5 bg-linear-to-l from-transparent via-orange-400 to-orange-300 rounded-full" />
         </div>
           
         {/* MAIN TITLE - Larger and More Expressive */}

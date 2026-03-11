@@ -8,7 +8,7 @@ export default function CTASection() {
         {/* CTA CARD */}
         <div 
           className="
-           bg-gradient-to-b from-[#FFF8F1] to-white
+           bg-linear-to-b from-[#FFF8F1] to-white
             rounded-3xl
             shadow-xl
             py-12 sm:py-12 md:py-16 lg:py-20

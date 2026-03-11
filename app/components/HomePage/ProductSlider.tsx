@@ -15,7 +15,7 @@ const products = [
 
 export default function ProductsSlider() {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-[#FFF8F1] via-white to-[#F8F7F5] w-full">
+    <section className="py-20 md:py-28 bg-linear-to-b from-[#FFF8F1] via-white to-[#F8F7F5] w-full">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         
         {/* MODERN SECTION HEADER */}

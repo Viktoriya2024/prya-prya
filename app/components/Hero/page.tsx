@@ -1,5 +1,5 @@
 import AboutSection from "../HomePage/About";
-import ContactSection from "../HomePage/ContactSection";
+import CTASection from "../HomePage/CTASection";
 import FeaturesSection from "../HomePage/Features";
 import Hero from "../HomePage/Hero";
 import ProductsSlider from "../HomePage/ProductSlider";
@@ -11,7 +11,7 @@ export default function Home() {
       <AboutSection/>
       <FeaturesSection/>
       <ProductsSlider/>
-      <ContactSection/>
+      <CTASection/>
     </>
   );
 }

@@ -37,8 +37,169 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-jakarta);
+}
+
+/* ========================================
+   MODERN TYPOGRAPHY SYSTEM
+   ======================================== */
+
+/* Typography Scale & Hierarchy */
+.text-display {
+  font-size: clamp(3rem, 8vw, 6rem); /* 48-96px */
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem); /* 36-64px */
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.text-h2 {
+  font-size: clamp(1.875rem, 4vw, 3rem); /* 30-48px */
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.text-h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem); /* 24-36px */
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.text-h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem); /* 20-30px */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.text-h5 {
+  font-size: clamp(1.125rem, 2vw, 1.5rem); /* 18-24px */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.text-h6 {
+  font-size: clamp(1rem, 1.5vw, 1.25rem); /* 16-20px */
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Body Text */
+.text-body-lg {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.text-body {
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.text-body-sm {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-caption {
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Font Weights */
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+/* Text Colors */
+.text-primary {
+  color: #1f2937; /* gray-900 */
+}
+
+.text-secondary {
+  color: #4b5563; /* gray-700 */
+}
+
+.text-muted {
+  color: #6b7280; /* gray-600 */
+}
+
+.text-accent {
+  color: #ff9800; /* orange brand */
+}
+
+/* Reading Optimizations */
+.prose {
+  max-width: 65ch;
+}
+
+.prose p + p {
+  margin-top: 1.25em;
+}
+
+.prose h2 + p,
+.prose h3 + p,
+.prose h4 + p {
+  margin-top: 1em;
+}
+
+/* Section Spacing */
+.section-spacing {
+  padding-top: clamp(3rem, 8vw, 7rem);
+  padding-bottom: clamp(3rem, 8vw, 7rem);
+}
+
+.section-spacing-sm {
+  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+/* Content Spacing */
+.content-spacing > * + * {
+  margin-top: 1rem;
+}
+
+.content-spacing-lg > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Smooth Font Rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 .swiper-button-prev,
 .swiper-button-next {

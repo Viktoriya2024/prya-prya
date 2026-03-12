@@ -199,7 +199,7 @@ export default function SectionBlock({
                 <div className="w-full max-w-lg mx-auto">
                   {/* Certificate Frame Card */}
                   <div className="bg-[#FFF3E6] border border-orange-200 rounded-3xl shadow-lg p-8 sm:p-10 hover:shadow-xl transition-shadow duration-300">
-                    <div className="relative w-full aspect-[3/4] rounded-lg shadow-md overflow-hidden bg-white">
+                    <div className="relative w-full aspect-3/4 rounded-lg shadow-md overflow-hidden bg-white">
                       <Image
                         src={image}
                         alt={title}
@@ -221,7 +221,7 @@ export default function SectionBlock({
               ) : (
                 <div className="relative w-full max-w-[320px] sm:max-w-[360px] md:max-w-[420px] h-64 sm:h-80 md:h-[360px] lg:h-[440px] group">
                   {/* Image */}
-                  <div className="relative w-full h-full bg-white/95 rounded-[32px] overflow-hidden shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-500">
+                  <div className="relative w-full h-full bg-white/95 rounded-4xl overflow-hidden shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-500">
                     <Image
                       src={image}
                       alt={title}

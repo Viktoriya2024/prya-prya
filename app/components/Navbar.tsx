@@ -81,14 +81,14 @@ export default function Navbar() {
               <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 rounded-lg transition-all duration-300 -z-10"></span>
             </Link>
             <Link
-              href="#product"
+              href="/products"
               className={`relative px-3 py-2 hover:text-white transition-colors duration-200 group whitespace-nowrap ${
-                pathname.includes('product') ? 'text-white' : ''
+                pathname === '/products' ? 'text-white' : ''
               }`}
             >
               <span className="relative z-10">продукція</span>
               <span className={`absolute bottom-0 left-0 h-0.5 bg-white rounded-full transition-all duration-300 ease-out ${
-                pathname.includes('product') ? 'w-full' : 'w-0 group-hover:w-full'
+                pathname === '/products' ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></span>
               <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 rounded-lg transition-all duration-300 -z-10"></span>
             </Link>
@@ -211,10 +211,10 @@ export default function Navbar() {
             про нас
           </Link>
           <Link
-            href="#product"
+            href="/products"
             onClick={() => setOpen(false)}
             className={`hover:bg-white/20 transition-all duration-300 py-2.5 sm:py-3 md:py-3.5 px-3 sm:px-4 md:px-5 rounded-xl hover:translate-x-1 hover:shadow-md active:translate-x-0 ${
-              pathname.includes('product') ? 'bg-white/25 shadow-md' : ''
+              pathname === '/products' ? 'bg-white/25 shadow-md' : ''
             }`}
           >
             продукція 

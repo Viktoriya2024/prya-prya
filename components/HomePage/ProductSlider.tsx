@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const products = [
   {
     name: "Вівсяне печиво",
@@ -75,7 +77,9 @@ export default function ProductsSlider() {
 
         {/* MODERN CTA BUTTON */}
         <div className="text-center mt-16">
-          <button className="
+          <Link
+            href="/products"
+            className="
             group inline-flex items-center gap-3
             px-10 py-4 md:px-12 md:py-5
             bg-linear-to-r from-[#ff9800] to-[#ffb74d]
@@ -97,7 +101,7 @@ export default function ProductsSlider() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

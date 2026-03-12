@@ -56,7 +56,7 @@ export default function Hero() {
         
         {/* MODERN CTA BUTTON */}
         <Link
-          href="#properties"
+          href="/products"
           className="
             group mt-10 inline-flex items-center gap-3
             px-10 py-4 md:px-12 md:py-5

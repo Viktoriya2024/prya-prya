@@ -12,18 +12,18 @@ export default function Navbar() {
   // Get current page name based on pathname
   const getCurrentPageName = () => {
     switch (pathname) {
-      case '/find-new-home':
-        return 'Find a Home 🏠︎';
-      case '/altu-duo':
-        return 'Alto Duo';
+      case '/':
+        return 'головна 🏠';
+      case '/about':
+        return 'Про нас';
+      case '/products':
+        return 'Продукція';
+      case '/contact':
+        return 'Контакти';
       default:
-        if (pathname.includes('buying-guide')) return 'Buying Guide';
-        if (pathname.includes('about')) return 'Про нас';
-        if (pathname.includes('investors')) return 'Investors';
-        if (pathname.includes('vision')) return 'Our Vision';
-        if (pathname.includes('news')) return 'News';
-        if (pathname.includes('contact')) return 'Контакти';
-        return 'головна 🏠︎';
+        if (pathname.includes('production')) return 'Виробництво';
+        if (pathname.includes('vacanc')) return 'Вакансії';
+        return 'головна 🏠';
     }
   };
 
@@ -93,14 +93,14 @@ export default function Navbar() {
               <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 rounded-lg transition-all duration-300 -z-10"></span>
             </Link>
             <Link
-              href="#production"
+              href="/production"
               className={`relative px-3 py-2 hover:text-white transition-colors duration-200 group whitespace-nowrap ${
-                pathname.includes('production') ? 'text-white' : ''
+                pathname === '/production' ? 'text-white' : ''
               }`}
             >
               <span className="relative z-10">виробництво</span>
               <span className={`absolute bottom-0 left-0 h-0.5 bg-white rounded-full transition-all duration-300 ease-out ${
-                pathname.includes('production') ? 'w-full' : 'w-0 group-hover:w-full'
+                pathname === '/production' ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></span>
               <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 rounded-lg transition-all duration-300 -z-10"></span>
             </Link>
@@ -220,10 +220,10 @@ export default function Navbar() {
             продукція 
           </Link>
           <Link
-            href="#production"
+            href="/production"
             onClick={() => setOpen(false)}
             className={`hover:bg-white/20 transition-all duration-300 py-2.5 sm:py-3 md:py-3.5 px-3 sm:px-4 md:px-5 rounded-xl hover:translate-x-1 hover:shadow-md active:translate-x-0 ${
-              pathname.includes('production') ? 'bg-white/25 shadow-md' : ''
+              pathname === '/production' ? 'bg-white/25 shadow-md' : ''
             }`}
           >
             виробництво

@@ -18,14 +18,14 @@ export default function ProductsHero() {
 
       {/* Content */}
       <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
-        <div className="bg-black/30 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 shadow-2xl border border-white/30 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white/95 mb-4 sm:mb-6 leading-tight tracking-tight drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
+        <div className="max-w-3xl bg-white/50 backdrop-blur-md border border-white/20 rounded-3xl px-10 py-10 shadow-2xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-neutral-900 mb-4 sm:mb-6 leading-tight ">
             Наша продукція
           </h1>
 
           <div className="w-20 h-1 bg-linear-to-r from-[#FF9800] to-[#FFB74D] rounded-full mx-auto mb-4 sm:mb-6"></div>
 
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-semibold mb-6 sm:mb-8 drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-700 leading-relaxed font-semibold mb-6 sm:mb-8 ">
             Широкий асортимент натуральних кондитерських виробів високої якості.
             Печиво, пряники, вафлі та багато іншого — все для вашої насолоди.
           </p>

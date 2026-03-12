@@ -1,80 +1,21 @@
-import SectionBlock from "@/components/shared/SectionBlock";
+import AboutHero from "@/components/About/AboutHero";
+import AboutFactory from "@/components/About/AboutFactory";
+import AboutProduction from "@/components/About/AboutProduction";
+import AboutProducts from "@/components/About/AboutProducts";
+import AboutStaff from "@/components/About/AboutStaff";
+import AboutQuality from "@/components/About/AboutQuality";
+import AboutValues from "@/components/About/AboutValues";
 
 export default function AboutPage() {
   return (
     <main id="about" className="scroll-smooth pt-16 sm:pt-18 md:pt-20">
-      
-      {/* HERO SECTION - Background image with overlay */}
-      <SectionBlock
-        title="Про нас"
-        text="Кондитерська фабрика ТМ «Пря-Пря» — це якість, смак та традиції. Ми створюємо натуральні кондитерські вироби, які радують наших клієнтів вже понад 8 років. Кожен продукт виготовляється з любов'ю та турботою про ваше здоров'я."
-        bgImage="/plakat1.jpg"
-        theme="accent"
-        isHero
-      />
-
-      {/* ABOUT FACTORY SECTION - Warm theme with main image */}
-      <SectionBlock
-        title="Кондитерська фабрика ТМ «Пря-Пря»"
-        text="Заснована в 2015 році, є одним з найбільш динамічно розвиваються кондитерським підприємством України. Ми використовуємо передові технології у виробництві кондитерських виробів, а також традиційні рецепти приготування домашньої випічки. У рецептурі нашої продукції об'єднані кращі традиції приготування кондитерських виробів України та провідних пекарських рецептур світу."
-        image="/anim-prya-prya.gif"
-        theme="warm"
-        circularImage
-      />
-
-       {/* PRODUCTION SECTION - Light theme with image */}
-      <SectionBlock
-        title="Виробництво"
-        text="Наше виробництво оснащене найсучаснішим обладнанням провідних світових виробників. Ми дотримуємось найвищих стандартів якості на всіх етапах виробничого процесу."
-        image="/ProductBackery.png"
-        theme="light"
-        features={[
-          "⚙️ Сучасне обладнання",
-          "✔ Контроль якості",
-          "🌿 Натуральні інгредієнти"
-        ]}
-        buttonText="Дізнатися більше →"
-        buttonLink="#production"
-        noBorder
-      />
-
-      {/* PRODUCTS SECTION - Accent theme with image on left */}
-      <SectionBlock
-        title="Наша продукція"
-        text="Ми пропонуємо широкий асортимент кондитерських виробів: печиво, пряники, вафлі, зефір та багато іншого. Продукція виготовляється на найсучаснішому обладнанні провідних світових виробників. Використовуються лише екологічно чисті інгредієнти (без ГМО)."
-        image="/Plakat2.jpg"
-        bgImage="/feautures-patern.jpg"
-        theme="accent"
-        reverse
-        noBorder
-      />
-
-      {/* STAFF SECTION - Warm theme with image */}
-      <SectionBlock
-        title="Співробітники"
-        text="Підприємство дбає про постійне підвищення кваліфікації співробітників. Наша команда складається з висококваліфікованих фахівців, які люблять свою справу. Ми створюємо комфортні умови праці та підтримуємо дружню атмосферу в колективі. Професіоналізм наших співробітників — запорука якості нашої продукції."
-        image="/teamPrya.png"
-        theme="warm"
-        noBorder
-      />
-
-      {/* QUALITY SECTION - Dark theme with reverse layout */}
-      <SectionBlock
-        title="Якість"
-        text="Компанія серйозно підходить до управління якістю продукції. Вся продукція проходить багаторівневий контроль якості. Ми маємо всі необхідні сертифікати та дозволи. Наша мета — забезпечити найвищу якість кондитерських виробів, які будуть радувати наших покупців своїм смаком та свіжістю."
-        image="/Sertificate.png"
-        theme="dark"
-        reverse
-        certificateCard
-      />
-
-      {/* VALUES SECTION - Accent theme, text-only */}
-      <SectionBlock
-        title="Наші цінності"
-        text="Якість • Натуральність • Смак • Безпека • Ми з повною відповідальністю підходимо до вирішення поставлених завдань і прагнемо до того, щоб наша продукція радувала споживачів своїм смаком, якістю та доступною ціною."
-        theme="accent"
-      />
-
+      <AboutHero />
+      <AboutFactory />
+      <AboutProduction />
+      <AboutProducts />
+      <AboutStaff />
+      <AboutQuality />
+      <AboutValues />
     </main>
   );
 }

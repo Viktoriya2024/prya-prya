@@ -47,7 +47,7 @@ export default function AboutSection() {
               {/* MODERN CTA BUTTON */}
               <div className="flex justify-start">
                 <Link
-                  href="#contact"
+                  href="/about"
                   className="
                     group inline-flex items-center gap-2
                     bg-linear-to-r from-[#ff9800] to-[#ffb74d]

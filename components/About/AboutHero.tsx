@@ -24,7 +24,7 @@ export default function AboutHero() {
               Про нас
             </h2>
             
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-white to-white/80 rounded-full mx-auto"></div>
+            <div className="w-16 sm:w-20 h-1 bg-linear-to-r from-white to-white/80 rounded-full mx-auto"></div>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-600 leading-relaxed font-semibold whitespace-pre-line ">
               Кондитерська фабрика ТМ «Пря-Пря» — це якість, смак та традиції. Ми створюємо натуральні кондитерські вироби, які радують наших клієнтів вже понад 8 років. Кожен продукт виготовляється з любов'ю та турботою про ваше здоров'я.

@@ -8,7 +8,7 @@ export default function AboutProducts() {
       className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 overflow-hidden bg-[url('/feautures-patern.jpg')] bg-repeat"
     >
       {/* Background Overlay */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#FF9800]/40 to-[#FFB74D]/30"></div>
+      <div className="absolute inset-0 z-10 bg-linear-to-br from-[#FF9800]/40 to-[#FFB74D]/30"></div>
 
       <div className="relative z-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
@@ -41,7 +41,7 @@ export default function AboutProducts() {
 
           {/* IMAGE */}
           <div className="md:w-1/2 w-full">
-            <div className="relative w-full aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 bg-white hover:shadow-3xl transition-all duration-500">
+            <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 bg-white hover:shadow-3xl transition-all duration-500">
               <Image
                 src="/Plakat2.jpg"
                 alt="Наша продукція"

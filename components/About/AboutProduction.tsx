@@ -20,7 +20,7 @@ export default function AboutProduction() {
               Виробництво
             </h2>
             
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-[#FF9800] to-[#FFB74D] rounded-full mx-auto md:mx-0"></div>
+            <div className="w-16 sm:w-20 h-1 bg-linear-to-r from-[#FF9800] to-[#FFB74D] rounded-full mx-auto md:mx-0"></div>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-700 leading-relaxed font-semibold whitespace-pre-line text-center md:text-left">
               Наше виробництво оснащене найсучаснішим обладнанням провідних світових виробників. Ми дотримуємось найвищих стандартів якості на всіх етапах виробничого процесу.
@@ -40,7 +40,7 @@ export default function AboutProduction() {
             <div className="flex justify-center md:justify-start pt-4">
               <Link
                 href="/production"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF9800] to-[#FFB74D] text-white font-bold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-[#FF9800] to-[#FFB74D] text-white font-bold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
               >
                 Дізнатися більше
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,7 +52,7 @@ export default function AboutProduction() {
 
           {/* IMAGE */}
           <div className="md:w-1/2 w-full">
-            <div className="relative w-full aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-white hover:shadow-3xl transition-all duration-500">
+            <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-white hover:shadow-3xl transition-all duration-500">
               <Image
                 src="/ProductBackery.png"
                 alt="Виробництво"

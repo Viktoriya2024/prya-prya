@@ -1,0 +1,17 @@
+import ProductionHero from "@/components/Production/Hero";
+import DoughSection from "@/components/Production/DoughSection";
+import FillingSection from "@/components/Production/FillingSection";
+import FormingSection from "@/components/Production/FormingSection";
+import BakingSection from "@/components/Production/BakingSection";
+
+export default function ProductionPage() {
+  return (
+    <main>
+      <ProductionHero />
+      <DoughSection />
+      <FillingSection />
+      <FormingSection />
+      <BakingSection />
+    </main>
+  );
+}

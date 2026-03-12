@@ -43,18 +43,18 @@ export default function Navbar() {
     <>
       {/* NAVBAR */}
       <header className="w-full fixed top-0 left-0 z-50 bg-linear-to-r from-[#ff9800] via-[#ff9800] to-[#ffb74d] backdrop-blur-md shadow-[0_2px_20px_rgba(255,152,0,0.15)] h-16 sm:h-18 md:h-20 lg:h-20 flex items-center border-b border-orange-300/20">
-        <div className="w-full lg:w-[85%] xl:w-[80%] max-w-7xl mx-auto flex items-center justify-between px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="w-full lg:w-[85%] xl:w-[80%] max-w-7xl mx-auto flex items-center justify-between px-2 xs:px-3 sm:px-5 md:px-6 lg:px-8 gap-2">
           {/* LOGO */}
           <Link 
             href="/" 
-            className="flex items-center shrink-0 transform hover:scale-105 hover:opacity-95 transition-all duration-300 ease-out active:scale-100"
+            className="flex items-center shrink-0 transform hover:scale-105 hover:opacity-95 transition-all duration-300 ease-out active:scale-100 min-w-0"
           >
             <Image
               src="/logotransp.png"
               alt="LOT40 Logo"
               width={400}
               height={160}
-              className="object-contain h-12 xs:h-14 sm:h-14 md:h-16 lg:h-18 xl:h-20 w-auto drop-shadow-sm hover:drop-shadow-md transition-all duration-300"
+              className="object-contain h-10 xs:h-12 sm:h-14 md:h-16 lg:h-18 xl:h-20 w-auto drop-shadow-sm hover:drop-shadow-md transition-all duration-300"
             />
           </Link>
 
@@ -140,14 +140,14 @@ export default function Navbar() {
           </nav>
 
           {/* MOBILE BURGER WITH PAGE NAME */}
-          <div className="lg:hidden flex items-center gap-2 sm:gap-3 md:gap-4">
-            <span className={`text-xs xs:text-sm sm:text-base font-medium truncate max-w-[120px] xs:max-w-[150px] sm:max-w-[180px] md:max-w-[220px] ${
+          <div className="lg:hidden flex items-center gap-1.5 xs:gap-2 sm:gap-3 md:gap-4 shrink-0">
+            <span className={`text-[10px] xs:text-xs sm:text-sm md:text-base font-medium truncate max-w-[80px] xs:max-w-[120px] sm:max-w-[180px] md:max-w-[220px] ${
               pathname === '/altu-duo' ? 'text-white/90' : 'text-white/95'
             }`}>
               {getCurrentPageName()}
             </span>
             <button
-              className="relative z-50 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex flex-col justify-center items-center bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-300 border border-white/30 hover:scale-105 active:scale-95 hover:rotate-0 hover:shadow-lg group shrink-0"
+              className="relative z-50 w-9 h-9 xs:w-10 xs:h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex flex-col justify-center items-center bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-300 border border-white/30 hover:scale-105 active:scale-95 hover:rotate-0 hover:shadow-lg group shrink-0"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
             >

@@ -28,7 +28,7 @@ export default function FillingSection() {
             Цех внесення начинки
           </h2>
 
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full" />
+          <div className="w-20 h-1 bg-linear-to-r from-orange-400 to-orange-500 rounded-full" />
 
           <p className="text-lg text-[#4A3A2A] leading-relaxed">
             На цьому етапі до сформованого тіста додається начинка.

@@ -15,7 +15,7 @@ export default function AboutValues() {
       className="py-16 px-6 bg-[url('/feautures-patern.jpg')] bg-repeat relative"
     >
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FF9800]/40 to-[#FFB74D]/30"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-[#FF9800]/40 to-[#FFB74D]/30"></div>
 
       <div className="max-w-4xl mx-auto relative z-10">
 

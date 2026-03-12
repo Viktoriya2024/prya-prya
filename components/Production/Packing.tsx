@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Packing() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-[#FFF8F1] to-white">
+    <section className="py-16 md:py-24 bg-linear-to-b from-[#FFF8F1] to-white">
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center gap-12 md:gap-16">
 
         {/* TEXT */}
@@ -16,7 +16,7 @@ export default function Packing() {
             Цех формування виробів
           </h2>
 
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full" />
+          <div className="w-20 h-1 bg-linear-to-r from-orange-400 to-orange-500 rounded-full" />
 
           <p className="text-lg text-[#4A3A2A] leading-relaxed">
             Цех пакування продукції

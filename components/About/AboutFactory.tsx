@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutFactory() {
   return (
-    <section className="relative py-12 sm:py-14 md:py-16 lg:py-20 overflow-hidden bg-gradient-to-b from-[#FFF8F1] to-white">
+    <section className="relative py-12 sm:py-14 md:py-16 lg:py-20 overflow-hidden bg-linear-to-b from-[#FFF8F1] to-white">
       <div className="relative z-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
           
@@ -13,7 +13,7 @@ export default function AboutFactory() {
               Кондитерська фабрика ТМ «Пря-Пря»
             </h2>
             
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-[#FF9800] to-[#FFB74D] rounded-full mx-auto md:mx-0"></div>
+            <div className="w-16 sm:w-20 h-1 bg-linear-to-r from-[#FF9800] to-[#FFB74D] rounded-full mx-auto md:mx-0"></div>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-700 leading-relaxed font-semibold whitespace-pre-line text-center md:text-left">
               Заснована в 2015 році, є одним з найбільш динамічно розвиваються кондитерським підприємством України. Ми використовуємо передові технології у виробництві кондитерських виробів, а також традиційні рецепти приготування домашньої випічки. У рецептурі нашої продукції об'єднані кращі традиції приготування кондитерських виробів України та провідних пекарських рецептур світу.

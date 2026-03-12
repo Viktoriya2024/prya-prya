@@ -33,7 +33,7 @@ export default function BakingSection() {
             Цех випікання
           </h2>
 
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full"></div>
+          <div className="w-20 h-1 bg-linear-to-r from-orange-400 to-orange-500 rounded-full"></div>
 
           <p className="text-lg text-[#4A3A2A] leading-relaxed">
             На цьому етапі сформовані вироби надходять до печей, де відбувається

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export type ThemeVariant = "light" | "warm" | "accent" | "dark";
 
@@ -11,18 +12,24 @@ interface SectionBlockProps {
   reverse?: boolean;
   theme?: ThemeVariant;
   isHero?: boolean;
+  features?: string[];
+  buttonText?: string;
+  buttonLink?: string;
+  circularImage?: boolean;
+  certificateCard?: boolean;
+  noBorder?: boolean;
 }
 
 const themeStyles = {
   light: {
-    background: "bg-white",
+    background: "bg-linear-to-b from-[#FFF8F1] to-white",
     text: "text-gray-800",
     title: "text-gray-900",
     divider: "from-[#FF9800] to-[#FFB74D]",
     overlay: "bg-black/0",
   },
   warm: {
-    background: "bg-gradient-to-br from-orange-50 to-yellow-50/30",
+    background: "bg-gradient-to-b from-[#FFF8F1] to-white",
     text: "text-gray-700",
     title: "text-gray-900",
     divider: "from-[#FF9800] to-[#FFB74D]",
@@ -52,26 +59,27 @@ export default function SectionBlock({
   reverse = false,
   theme = "light",
   isHero = false,
+  features,
+  buttonText,
+  buttonLink,
+  circularImage = false,
+  certificateCard = false,
+  noBorder = false,
 }: SectionBlockProps) {
   const styles = themeStyles[theme];
 
   return (
-    <section className={`relative ${isHero ? 'h-[70vh] min-h-[520px] flex items-center justify-center' : 'py-16 md:py-24 lg:py-28'} overflow-hidden ${styles.background}`}>
-      {/* Background Image with Overlay */}
+    <section className={`relative ${isHero ? 'min-h-[500px] sm:min-h-[550px] md:h-[70vh] md:min-h-[600px] flex items-center justify-center py-12 md:py-0' : 'py-12 sm:py-14 md:py-16 lg:py-20'} overflow-hidden ${bgImage ? '' : styles.background}`}
+      style={bgImage ? { 
+        backgroundImage: `url(${bgImage})`, 
+        backgroundRepeat: isHero ? 'no-repeat' : 'repeat',
+        backgroundSize: isHero ? 'cover' : 'auto',
+        backgroundPosition: isHero ? 'center' : 'top left'
+      } : undefined}
+    >
+      {/* Background Overlay */}
       {bgImage && (
-        <>
-          <div className="absolute inset-0 z-0">
-            <Image
-              src={bgImage}
-              alt={title}
-              fill
-              className="object-cover"
-              priority={true}
-              quality={90}
-            />
-          </div>
-          <div className={`absolute inset-0 z-10 ${styles.overlay}`}></div>
-        </>
+        <div className={`absolute inset-0 z-10 ${styles.overlay}`}></div>
       )}
 
       {/* Content */}
@@ -79,60 +87,150 @@ export default function SectionBlock({
         <div
           className={`max-w-7xl mx-auto flex flex-col ${
             image ? "md:flex-row" : ""
-          } items-center gap-12 md:gap-16 lg:gap-20 px-4 sm:px-6 md:px-8 lg:px-10 ${
+          } items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 ${
             reverse ? "md:flex-row-reverse" : ""
           }`}
         >
           {/* TEXT CONTENT */}
           <div
             className={`${
-              image ? "md:w-1/2" : "max-w-4xl mx-auto text-center"
-            } space-y-6 ${
+              image ? "md:w-1/2 w-full max-w-xl" : "max-w-4xl mx-auto text-center"
+            } space-y-4 sm:space-y-5 md:space-y-6 ${
               isHero 
-                ? 'bg-black/40 backdrop-blur-md rounded-3xl p-8 sm:p-10 md:p-12 lg:p-14 shadow-2xl border border-white/30' 
+                ? 'bg-black/60 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 shadow-2xl border border-white/30' 
                 : ''
             }`}
           >
             <h2
-              className={`text-3xl sm:text-4xl md:text-5xl ${isHero ? 'lg:text-6xl' : 'lg:text-6xl'} font-extrabold ${styles.title} mb-4 leading-tight tracking-tight ${
+              className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl ${isHero ? 'xl:text-6xl' : 'xl:text-5xl'} font-extrabold ${isHero ? 'text-white/95' : styles.title} mb-3 sm:mb-4 leading-tight tracking-tight ${
                 image ? "text-center md:text-left" : ""
-              } ${isHero || bgImage ? 'drop-shadow-[0_3px_10px_rgba(0,0,0,0.6)]' : ''}`}
+              } ${isHero || bgImage ? 'drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]' : ''}`}
             >
               {title}
             </h2>
             
             <div
-              className={`w-20 h-1 bg-linear-to-r ${styles.divider} rounded-full ${
+              className={`w-16 sm:w-20 h-1 bg-linear-to-r ${styles.divider} rounded-full ${
                 image ? "mx-auto md:mx-0" : "mx-auto"
               }`}
             ></div>
 
             <p
-              className={`text-lg sm:text-xl ${isHero ? 'md:text-2xl' : 'md:text-xl'} ${styles.text} text-white leading-relaxed font-semibold whitespace-pre-line ${
+              className={`text-base sm:text-lg md:text-xl ${isHero ? 'lg:text-2xl' : 'lg:text-xl'} ${isHero ? 'text-white/90' : styles.text} leading-relaxed font-semibold whitespace-pre-line ${
                 image ? "text-center md:text-left" : ""
-              } ${isHero || bgImage ? 'drop-shadow-lg' : ''} ${isHero ? 'text-white' : ''}`}
+              } ${isHero || bgImage ? 'drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]' : ''}`}
             >
               {text}
             </p>
+
+            {/* Optional Features List */}
+            {features && features.length > 0 && (
+              <div className={`mt-6 sm:mt-8 space-y-3 sm:space-y-4 ${
+                image ? "flex flex-col items-center md:items-start" : "flex flex-col items-center"
+              }`}>
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 text-base sm:text-lg md:text-xl font-medium"
+                  >
+                    <span className="text-2xl sm:text-3xl shrink-0">
+                      {feature.split(' ')[0]}
+                    </span>
+                    <span className={`${styles.text} leading-relaxed`}>
+                      {feature.split(' ').slice(1).join(' ')}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Optional Button */}
+            {buttonText && buttonLink && (
+              <div className={`mt-6 sm:mt-8 ${image ? "flex justify-center md:justify-start" : "flex justify-center"}`}>
+                <Link
+                  href={buttonLink}
+                  className="
+                    group inline-flex items-center gap-2
+                    bg-linear-to-r from-[#ff9800] to-[#ffb74d]
+                    hover:from-[#ff9800] hover:to-[#ff9800]
+                    text-white px-6 py-3
+                    text-sm md:text-base font-semibold
+                    rounded-full
+                    shadow-[0_4px_16px_rgba(255,152,0,0.25)]
+                    hover:shadow-[0_6px_24px_rgba(255,152,0,0.4)]
+                    hover:scale-105
+                    transition-all duration-300
+                    border border-white/20
+                  "
+                >
+                  <span>{buttonText}</span>
+                  <svg 
+                    className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* SIDE IMAGE */}
           {image && (
-            <div className="md:w-1/2 flex justify-center">
-              <div className="relative w-full max-w-[500px] h-80 sm:h-[380px] md:h-[420px] group">
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-linear-to-br from-orange-400/20 to-yellow-400/20 rounded-3xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
-                
-                {/* Image */}
-                <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-500">
+            <div className="md:w-1/2 w-full flex justify-center">
+              {circularImage ? (
+                <div className="relative w-[360px] h-[360px] group">
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 rounded-full bg-orange-200/20 blur-3xl"></div>
+                  
+                  {/* Image */}
+                  <div className="relative w-full h-full bg-white rounded-full overflow-hidden shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-500">
+                    <Image
+                      src={image}
+                      alt={title}
+                      fill
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+              ) : certificateCard ? (
+                <div className="w-full max-w-lg mx-auto">
+                  {/* Certificate Frame Card */}
+                  <div className="bg-[#FFF3E6] border border-orange-200 rounded-3xl shadow-lg p-8 sm:p-10 hover:shadow-xl transition-shadow duration-300">
+                    <div className="relative w-full aspect-[3/4] rounded-lg shadow-md overflow-hidden bg-white">
+                      <Image
+                        src={image}
+                        alt={title}
+                        fill
+                        className="object-contain p-4"
+                      />
+                    </div>
+                  </div>
+                </div>
+              ) : noBorder ? (
+                <div className="relative w-full max-w-[320px] sm:max-w-[360px] md:max-w-[420px] h-64 sm:h-80 md:h-[360px] lg:h-[440px]">
                   <Image
                     src={image}
                     alt={title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover rounded-xl"
                   />
                 </div>
-              </div>
+              ) : (
+                <div className="relative w-full max-w-[320px] sm:max-w-[360px] md:max-w-[420px] h-64 sm:h-80 md:h-[360px] lg:h-[440px] group">
+                  {/* Image */}
+                  <div className="relative w-full h-full bg-white/95 rounded-[32px] overflow-hidden shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-500">
+                    <Image
+                      src={image}
+                      alt={title}
+                      fill
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

@@ -1,4 +1,4 @@
-import SectionBlock from "./SectionBlock";
+import SectionBlock from "@/components/shared/SectionBlock";
 
 export default function AboutPage() {
   return (

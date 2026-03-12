@@ -1,6 +1,8 @@
-import ProductsHero from "../components/Products/ProductsHero";
-import ProductCategories from "../components/Products/ProductCategories";
-import ProductGrid from "../components/Products/ProductGrid";
+import ProductsHero from "@/components/Products/ProductsHero";
+import ProductCategories from "@/components/Products/ProductCategories";
+import ProductGrid from "@/components/Products/ProductGrid";
+import ProductsQuality from "@/components/Products/ProductsQuality";
+import ProductsCTA from "@/components/Products/ProductsCTA";
 
 export default function ProductsPage() {
   return (
@@ -8,6 +10,8 @@ export default function ProductsPage() {
       <ProductsHero />
       <ProductCategories />
       <ProductGrid />
+      <ProductsQuality />
+      <ProductsCTA />
     </main>
   );
 }

@@ -2,61 +2,64 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export interface Product {
+interface ProductCardProps {
   id: string;
   name: string;
   description: string;
   image: string;
+  weight: string;
   category: string;
+  slug: string;
 }
 
-interface ProductCardProps {
-  product: Product;
-}
-
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({
+  id,
+  name,
+  description,
+  image,
+  weight,
+  category,
+  slug,
+}: ProductCardProps) {
   return (
-    <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-      {/* Product Image */}
-      <div className="relative w-full h-64 sm:h-72 overflow-hidden bg-gradient-to-br from-orange-50 to-yellow-50/30">
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          className="object-cover group-hover:scale-110 transition-transform duration-500"
-        />
+    <Link href={`/products/${category}/${slug}`}>
+      <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+        {/* Product Image Container */}
+        <div className="relative w-full h-56 sm:h-64 md:h-72 bg-gradient-to-b from-orange-50 to-white overflow-hidden">
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-300"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </div>
+
+        {/* Product Info */}
+        <div className="flex-1 p-4 sm:p-5 md:p-6 flex flex-col">
+          {/* Weight Badge */}
+          <div className="inline-flex w-fit mb-3">
+            <span className="px-3 py-1 text-xs sm:text-sm font-semibold text-orange-700 bg-orange-100 rounded-full">
+              {weight}
+            </span>
+          </div>
+
+          {/* Product Name */}
+          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
+            {name}
+          </h3>
+
+          {/* Description */}
+          <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2 flex-1">
+            {description}
+          </p>
+
+          {/* Details Button */}
+          <button className="mt-auto w-full py-2 sm:py-2.5 px-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform group-hover:scale-105 active:scale-95">
+            Детальніше
+          </button>
+        </div>
       </div>
-
-      {/* Product Info */}
-      <div className="p-5 sm:p-6">
-        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#FF9800] transition-colors duration-300">
-          {product.name}
-        </h3>
-
-        <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2">
-          {product.description}
-        </p>
-
-        <Link
-          href={`/products/${product.id}`}
-          className="inline-flex items-center gap-2 text-[#FF9800] hover:text-[#ff9800]/80 font-semibold text-sm sm:text-base transition-colors duration-300 group/link"
-        >
-          <span>Докладніше</span>
-          <svg
-            className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2.5}
-              d="M13 7l5 5m0 0l-5 5m5-5H6"
-            />
-          </svg>
-        </Link>
-      </div>
-    </div>
+    </Link>
   );
 }

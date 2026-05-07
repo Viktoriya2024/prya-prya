@@ -1,5 +1,5 @@
 import ProductionHero from "@/components/Production/Hero";
-import FillingSection from "@/components/Production/FillingSection";
+
 import FormingSection from "@/components/Production/FormingSection";
 import BakingSection from "@/components/Production/BakingSection";
 import DoughSection from "@/components/Production/DoughSection";
@@ -11,9 +11,10 @@ export default function ProductionPage() {
     <main>
       <ProductionHero />
       <DoughSection/>
-      <FillingSection />
-      <FormingSection />
       <BakingSection />
+     
+      <FormingSection />
+      
       <Packing/>
       <ProductionFinalBlock/>
     </main>

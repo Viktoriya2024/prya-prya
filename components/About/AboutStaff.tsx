@@ -9,13 +9,13 @@ export default function AboutStaff() {
           
           {/* TEXT CONTENT */}
           <div className="md:w-1/2 w-full space-y-4 sm:space-y-5 md:space-y-6">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold text-gray-900 mb-3 sm:mb-4 leading-tight tracking-tight text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold text-white/60 mb-3 sm:mb-4 leading-tight tracking-tight text-center md:text-left">
               Співробітники
             </h2>
             
             <div className="w-16 sm:w-20 h-1 bg-linear-to-r from-[#FF9800] to-[#FFB74D] rounded-full mx-auto md:mx-0"></div>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-700 leading-relaxed font-semibold whitespace-pre-line text-center md:text-left">
+            <p className="text-base sm:text-lg md:text-xl lg:text-xl text-white/60 leading-relaxed font-semibold whitespace-pre-line text-center md:text-left">
               Підприємство дбає про постійне підвищення кваліфікації співробітників. Наша команда складається з висококваліфікованих фахівців, які люблять свою справу. Ми створюємо комфортні умови праці та підтримуємо дружню атмосферу в колективі. Професіоналізм наших співробітників — запорука якості нашої продукції.
             </p>
           </div>

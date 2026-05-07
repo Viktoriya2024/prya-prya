@@ -41,12 +41,12 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-gradient-to-r from-[#ff9800] via-[#ff9800] to-[#ffb74d] shadow-[0_4px_20px_rgba(255,152,0,0.18)]">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-linear-to-r from-[#ff9800] via-[#ff9800] to-[#ffb74d] shadow-[0_4px_20px_rgba(255,152,0,0.18)]">
         <div className="flex h-16 w-full items-center justify-between gap-1 px-2 sm:gap-2 sm:px-4 md:gap-4 md:px-6 lg:h-20 lg:gap-6 lg:px-8">
           {/* LOGO */}
           <Link
             href="/"
-            className="relative z-[60] flex items-center"
+            className="relative z-60 flex items-center"
             aria-label="На головну"
           >
             <Image
@@ -127,7 +127,7 @@ export default function Navbar() {
       />
 
       <aside
-        className={`fixed right-0 top-0 z-50 h-screen w-[85%] max-w-[360px] border-l border-white/10 bg-gradient-to-b from-[#ff9800] to-[#ffb74d] px-6 pb-8 pt-24 shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
+        className={`fixed right-0 top-0 z-50 h-screen w-[85%] max-w-[360px] border-l border-white/10 bg-linear-to-b from-[#ff9800] to-[#ffb74d] px-6 pb-8 pt-24 shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

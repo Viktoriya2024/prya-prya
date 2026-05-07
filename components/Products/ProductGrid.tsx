@@ -51,19 +51,22 @@ export default function ProductGrid({
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          id={product.id}
-          name={product.name_ua}
-          description={product.description_ua}
-          image={product.image}
-          weight={product.weight}
-          category={category}
-          slug={product.slug}
-        />
-      ))}
+    <div className="flex justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 w-full max-w-7xl">
+        {products.map((product) => (
+          <div key={product.id} className="flex justify-center">
+            <ProductCard
+              id={product.id}
+              name={product.name_ua}
+              description={product.description_ua}
+              image={product.image}
+              weight={product.weight}
+              category={category}
+              slug={product.slug}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ProductsCTA() {
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-[#FF9800] to-[#FFB74D]">
+    <section className="py-16 sm:py-20 md:py-24 bg-linear-to-br from-[#FF9800] to-[#FFB74D]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 sm:mb-6 drop-shadow-lg">

@@ -23,39 +23,41 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <Link href={`/products/${category}/${slug}`}>
-      <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
-        {/* Product Image Container */}
-        <div className="relative w-full h-56 sm:h-64 md:h-72 bg-gradient-to-b from-orange-50 to-white overflow-hidden">
+      <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full flex flex-col max-w-xs mx-auto">
+        {/* Product Image Container - Larger Height */}
+        <div className="relative w-full h-80 bg-linear-to-br from-amber-50 via-beige-50 to-yellow-50 overflow-hidden flex items-center justify-center p-6">
           <Image
             src={image}
             alt={name}
-            fill
-            className="object-cover group-hover:scale-110 transition-transform duration-300"
+            width={320}
+            height={320}
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            priority={false}
           />
+          
+          {/* Weight Badge - Positioned Over Image */}
+          <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
+            <div className="px-3 py-1.5 text-xs sm:text-sm font-semibold text-white bg-linear-to-r from-orange-500 to-orange-600 rounded-full shadow-md">
+              {weight}
+            </div>
+          </div>
         </div>
 
-        {/* Product Info */}
-        <div className="flex-1 p-4 sm:p-5 md:p-6 flex flex-col">
-          {/* Weight Badge */}
-          <div className="inline-flex w-fit mb-3">
-            <span className="px-3 py-1 text-xs sm:text-sm font-semibold text-orange-700 bg-orange-100 rounded-full">
-              {weight}
-            </span>
-          </div>
-
-          {/* Product Name */}
-          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
+        {/* Product Info - Clean and Balanced */}
+        <div className="p-4 sm:p-5 flex flex-col flex-1">
+          {/* Product Name - Premium Typography */}
+          <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors duration-200">
             {name}
           </h3>
 
-          {/* Description */}
-          <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2 flex-1">
+          {/* Description - Short Preview Only */}
+          <p className="text-xs sm:text-sm text-gray-600 mb-4 line-clamp-2 flex-1 leading-relaxed">
             {description}
           </p>
 
-          {/* Details Button */}
-          <button className="mt-auto w-full py-2 sm:py-2.5 px-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform group-hover:scale-105 active:scale-95">
+          {/* Details Button - Premium CTA */}
+          <button className="mt-auto w-full py-2.5 sm:py-3 px-4 bg-linear-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform group-hover:scale-105 active:scale-95 shadow-md hover:shadow-lg text-sm">
             Детальніше
           </button>
         </div>

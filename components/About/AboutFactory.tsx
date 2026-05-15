@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutFactory() {
   return (
-    <section className="relative py-12 sm:py-14 md:py-16 lg:py-20 overflow-hidden bg-linear-to-b from-[#FFF8F1] to-white">
+    <section className="relative py-12 sm:py-14 md:py-16 lg:py-20 overflow-hidden  bg-[#F4E8DA]">
       <div className="relative z-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
           

@@ -31,7 +31,7 @@ const qualityFeatures: QualityFeature[] = [
 
 export default function ProductsQuality() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-linear-to-b from-[#FFF8F1] to-white">
+    <section className="py-12 sm:py-16 md:py-20 bg-linear-to-b bg-[#F4E8DA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         {/* Section Title */}
         <div className="text-center mb-10 sm:mb-12 md:mb-16">

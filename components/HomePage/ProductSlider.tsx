@@ -2,16 +2,16 @@ import Link from "next/link";
 
 const products = [
   {
-    name: "Вівсяне печиво",
-    image: "/Cookies2.png",
+    name: "Козинак із кунжутом",
+    image: "/products/homka2.png",
   },
   {
-    name: "Пряники",
-    image: "/cookiesProduct.png",
+    name: "«Хомка» з глазурованим дном",
+    image: "/products/kozinak3.png",
   },
   {
-    name: "Фітнес-лінія",
-    image: "/Fitness12.png",
+    name: "Батончик «Тропік» у кондитерській глазурі",
+    image: "/products/kokosik.png",
   },
 ];
 

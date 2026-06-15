@@ -11,7 +11,7 @@ interface Category {
 
 const categories: Category[] = [
   { id: "cookies", name: "Печиво", image: "/coockies.png", slug: "cookies" },
- /*  { id: "gingerbread", name: "Пряники", image: "/pryaniki.png", slug: "gingerbread" }, */
+   { id: "gingerbread", name: "Пряники", image: "/pryaniki.png", slug: "gingerbread" }, 
   { id: "oriental", name: "Східні солодощі", image: "/shidniSolodoshi2.png", slug: "eastern-sweets" },
   { id: "candies", name: "Цукерки", image: "/smallbox.png", slug: "candies" },
   { id: "new", name: "Новинки", image: "/news.png", slug: "new" },
@@ -40,7 +40,7 @@ export default function ProductCategories() {
 
         {/* Categories */}
         <div className="flex justify-center">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 sm:gap-12 md:gap-14">
+          <div className="flex flex-wrap md:flex-nowrap justify-center gap-6 md:gap-8">
             {categories.map((category) => (
               <Link
                 key={category.id}

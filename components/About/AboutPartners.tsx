@@ -7,6 +7,7 @@ export default function AboutPartners() {
     { name: "КЛАСС", id: 2, logo: "/partners/klass.png" },
     { name: "Foodex", id: 3, logo: "/partners/foodex.png" },
     { name: "Lais", id: 4, logo: "/partners/logo-leis.png" },
+    { name: "AGROSMIX  GRUP", id: 4, logo: "/partners/AGROMIX_logo.jpg" },
   ];
 
   return (

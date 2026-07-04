@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function FormingSection() {
+  const { t } = useTranslation();
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-linear-to-b from-[#FFF8F1] to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col md:flex-row items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16">
@@ -10,21 +12,21 @@ export default function FormingSection() {
         <div className="md:w-1/2 space-y-4 sm:space-y-5 md:space-y-6">
 
           <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] text-orange-500 font-semibold">
-            Етап 3
+            {t("productionPage.forming.stage")}
           </p>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2B1E16]">
-            Цех глазурування продукції
+            {t("productionPage.forming.title")}
           </h2>
 
           <div className="w-16 sm:w-20 h-0.5 sm:h-1 bg-linear-to-r from-orange-400 to-orange-500 rounded-full" />
 
           <p className="text-base sm:text-lg md:text-xl text-[#4A3A2A] leading-relaxed">
-            На цьому етапі готові вироби після випікання надходять до глазурувальної лінії, де покриваються рівномірним шаром шоколадної або цукрової глазурі. Сучасне обладнання забезпечує точне нанесення покриття та стабільну якість кожної партії продукції.</p>
+            {t("productionPage.forming.text1")}
+          </p>
 
           <p className="text-base sm:text-lg md:text-xl text-[#4A3A2A] leading-relaxed">
-              Контроль температури, густини глазурі та швидкості конвеєра дозволяє досягти ідеального зовнішнього вигляду, привабливого блиску та насиченого смаку виробів.
-              Після глазурування продукція направляється на охолодження для фіксації покриття та підготовки до подальшого пакування.
+            {t("productionPage.forming.text2")}
           </p>
 
         </div>
@@ -35,7 +37,7 @@ export default function FormingSection() {
 
             <Image
               src="/Glazirovka.png"
-              alt="Цех формування виробів"
+              alt={t("productionPage.forming.title")}
               fill
               className="object-cover"
             />

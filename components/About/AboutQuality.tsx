@@ -27,7 +27,7 @@ export default function AboutQuality() {
             <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-[#FFF3E6] p-8 border-8 border-orange-200 hover:shadow-3xl transition-all duration-500">
               <Image
                 src="/Sertificate.png"
-                alt="Якість"
+                alt={t("about.quality.imageAlt")}
                 fill
                 className="object-contain p-4 hover:scale-105 transition-transform duration-700"
               />

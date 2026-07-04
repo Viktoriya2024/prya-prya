@@ -151,9 +151,9 @@ export default function CookieConsent() {
           <button
             onClick={() => setShowSettings(true)}
             className="text-xs text-gray-500 hover:text-gray-700 underline py-1 px-2 rounded hover:bg-gray-100 transition-colors duration-200"
-            title="Відкрити налаштування cookies"
+            title={t("common.cookies.settingsButtonTitle")}
           >
-            🍪 Налаштування cookies
+            🍪 {t("common.cookies.settingsLabel")}
           </button>
         </div>
       )}

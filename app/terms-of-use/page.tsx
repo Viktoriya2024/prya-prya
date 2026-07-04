@@ -1,80 +1,58 @@
+"use client";
+import { useTranslation } from "react-i18next";
+
 export default function TermsOfUse() {
+  const { t } = useTranslation();
+  const company = t("policies.terms.company");
+
   return (
     <div className="min-h-screen bg-white pt-24 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-        <h1 className="text-4xl font-bold text-[#2D241C] mb-8">Умови використання</h1>
+        <h1 className="text-4xl font-bold text-[#2D241C] mb-8">{t("policies.terms.title")}</h1>
 
         <div className="max-w-none text-gray-700 space-y-6">
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">1. Загальні положення</h2>
-            <p>
-              Ласкаво просимо на офіційний вебсайт компанії <strong>«ПРЯ-ПРЯ»</strong>.
-            </p>
-            <p>
-              Використовуючи цей вебсайт, Ви підтверджуєте свою згоду з цими Умовами використання. Якщо Ви не погоджуєтеся з будь-яким із положень цього документа, будь ласка, припиніть використання сайту.
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.terms.section1")}</h2>
+            <p>{t("policies.terms.section1Text1", { company: `«${company}»` })}</p>
+            <p>{t("policies.terms.section1Text2")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">2. Використання вебсайту</h2>
-            <p>
-              Матеріали, розміщені на цьому вебсайті, мають виключно інформаційний характер.
-            </p>
-            <p>
-              Користувач зобов'язується використовувати сайт відповідно до чинного законодавства України та не здійснювати дій, які можуть порушити його роботу або завдати шкоди Компанії чи іншим користувачам.
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.terms.section2")}</h2>
+            <p>{t("policies.terms.section2Text1")}</p>
+            <p>{t("policies.terms.section2Text2")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">3. Інтелектуальна власність</h2>
-            <p>
-              Усі матеріали, розміщені на цьому вебсайті, включаючи текст, фотографії, графіку, логотипи, дизайн та інші елементи, є власністю компанії <strong>«ПРЯ-ПРЯ»</strong> або використовуються на законних підставах.
-            </p>
-            <p>
-              Будь-яке копіювання, розповсюдження, зміна або використання матеріалів без письмової згоди Компанії забороняється, якщо інше не передбачено законодавством.
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.terms.section3")}</h2>
+            <p>{t("policies.terms.section3Text1", { company: `«${company}»` })}</p>
+            <p>{t("policies.terms.section3Text2")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">4. Обмеження відповідальності</h2>
-            <p>
-              Компанія докладає всіх зусиль для забезпечення актуальності та достовірності інформації, розміщеної на вебсайті.
-            </p>
-            <p>
-              Разом з тим Компанія не гарантує повної відсутності технічних помилок або тимчасових перебоїв у роботі сайту та не несе відповідальності за будь-які збитки, що можуть виникнути внаслідок використання або неможливості використання цього вебсайту.
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.terms.section4")}</h2>
+            <p>{t("policies.terms.section4Text1")}</p>
+            <p>{t("policies.terms.section4Text2")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">5. Посилання на сторонні ресурси</h2>
-            <p>
-              Вебсайт може містити посилання на сторонні вебресурси.
-            </p>
-            <p>
-              Компанія <strong>«ПРЯ-ПРЯ»</strong> не несе відповідальності за зміст, політику конфіденційності або роботу таких ресурсів.
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.terms.section5")}</h2>
+            <p>{t("policies.terms.section5Text1")}</p>
+            <p>{t("policies.terms.section5Text2", { company: `«${company}»` })}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">6. Зміни до Умов використання</h2>
-            <p>
-              Компанія залишає за собою право змінювати або оновлювати ці Умови використання у будь-який час без попереднього повідомлення.
-            </p>
-            <p>
-              Актуальна редакція документа завжди публікується на цій сторінці.
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.terms.section6")}</h2>
+            <p>{t("policies.terms.section6Text1")}</p>
+            <p>{t("policies.terms.section6Text2")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">7. Контактна інформація</h2>
-            <p>
-              Якщо у Вас виникли запитання щодо цих Умов використання, будь ласка, звертайтеся до нас.
-            </p>
-            <p className="font-semibold mt-4">
-              ПРЯ-ПРЯ
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.terms.section7")}</h2>
+            <p>{t("policies.terms.section7Text")}</p>
+            <p className="font-semibold mt-4">{company}</p>
             <p className="space-y-2">
-              📍 Україна, вул. Стуса Василя, 11<br/>
+              📍 {t("common.footer.address")}<br/>
               ✉ E-mail:{' '}
               <a href="mailto:gbronshpak@gmail.com" className="text-[#FF9800] hover:text-[#FFB74D] underline">
                 gbronshpak@gmail.com
@@ -87,7 +65,7 @@ export default function TermsOfUse() {
 
           <section className="mt-8 pt-6 border-t border-gray-300">
             <p className="text-sm text-gray-600">
-              <strong>Останнє оновлення:</strong> червень 2026 року.
+              <strong>{t("policies.terms.lastUpdated")}:</strong> {t("policies.terms.lastUpdatedDate")}.
             </p>
           </section>
         </div>

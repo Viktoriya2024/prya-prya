@@ -5,48 +5,32 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import CategoryBanner from "@/components/Products/CategoryBanner";
 import ProductGrid from "@/components/Products/ProductGrid";
-import {
-  getProductsByCategory,
-  Product,
-} from "@/data/products";
+import { getProductsByCategory, Product } from "@/data/products";
+import { useTranslation } from "react-i18next";
 
 type CategoryType = "cookies" | "gingerbread" | "eastern-sweets" | "candies" | "new";
 
-const categoryBanners = {
-  cookies: {
-    title: "Печиво",
-    subtitle: "Класичні печива з найкращих інгредієнтів",
-    color: "from-amber-100 to-orange-50",
-  },
-  gingerbread: {
-    title: "Пряники",
-    subtitle: "Традиційні медові пряники за секретним рецептом",
-    color: "from-orange-100 to-amber-50",
-  },
-  "eastern-sweets": {
-    title: "Східні солодощі",
-    subtitle: "Преміум козинаки та дегустаційні смеси",
-    color: "from-yellow-100 to-amber-50",
-  },
-  candies: {
-    title: "Цукерки",
-    subtitle: "Розкішні цукерки для найвибагливіших гурманів",
-    color: "from-rose-100 to-orange-50",
-  },
-  new: {
-    title: "Новинки",
-    subtitle: "Новітні смаки та комбінації",
-    color: "from-purple-100 to-pink-50",
-  },
-};
-
 export default function CategoryPage() {
+  const { t } = useTranslation();
   const params = useParams();
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const category = (params?.category as CategoryType) || "cookies";
-  const banner = categoryBanners[category] || categoryBanners.cookies;
+  
+  // Get translations for category
+  const categoryData = t(`productCategories.${category}`, { returnObjects: true }) as any;
+  const banner = {
+    title: categoryData?.title || t("common.navigation.products"),
+    subtitle: categoryData?.subtitle || "",
+    color: [
+      "from-amber-100 to-orange-50",
+      "from-orange-100 to-amber-50",
+      "from-yellow-100 to-amber-50",
+      "from-rose-100 to-orange-50",
+      "from-purple-100 to-pink-50",
+    ][["cookies", "gingerbread", "eastern-sweets", "candies", "new"].indexOf(category)] || "from-amber-100 to-orange-50",
+  };
 
   useEffect(() => {
     console.log("Category from params:", params?.category);
@@ -101,7 +85,7 @@ export default function CategoryPage() {
                   d="M15 19l-7-7 7-7"
                 />
               </svg>
-              Назад до продукції
+              {t("productDetail.backToProducts")}
             </Link>
           </div>
         )}

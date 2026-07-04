@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 
 interface ProductImageGalleryProps {
   images: string[];
@@ -19,6 +20,7 @@ export default function ProductImageGallery({
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   if (!images || images.length === 0) {
     return null;
@@ -326,7 +328,7 @@ export default function ProductImageGallery({
 
               {/* Mobile Navigation Hint */}
               <div className="md:hidden text-white/60 text-sm">
-                Свайп для навігації
+                {t("productDetail.swipeHint")}
               </div>
             </div>
           </div>

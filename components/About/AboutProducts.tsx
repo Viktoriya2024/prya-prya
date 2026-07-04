@@ -46,7 +46,7 @@ export default function AboutProducts() {
             <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 bg-white hover:shadow-3xl transition-all duration-500">
               <Image
                 src="/Plakat2.jpg"
-                alt="Наша продукція"
+                alt={t("about.products.imageAlt")}
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 interface ProductCardProps {
   id: string;
@@ -21,6 +22,7 @@ export default function ProductCard({
   category,
   slug,
 }: ProductCardProps) {
+  const { t } = useTranslation();
   return (
     <Link href={`/products/${category}/${slug}`}>
       <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full flex flex-col max-w-xs mx-auto">
@@ -58,7 +60,7 @@ export default function ProductCard({
 
           {/* Details Button - Premium CTA */}
           <button className="mt-auto w-full py-2.5 sm:py-3 px-4 bg-linear-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform group-hover:scale-105 active:scale-95 shadow-md hover:shadow-lg text-sm">
-            Детальніше
+            {t("productDetail.detailsButton")}
           </button>
         </div>
       </div>

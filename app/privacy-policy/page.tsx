@@ -1,99 +1,77 @@
+"use client";
+import { useTranslation } from "react-i18next";
+
 export default function PrivacyPolicy() {
+  const { t } = useTranslation();
+  const company = t("policies.privacy.company");
+
   return (
     <div className="min-h-screen bg-white pt-24 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-        <h1 className="text-4xl font-bold text-[#2D241C] mb-8">Політика конфіденційності</h1>
+        <h1 className="text-4xl font-bold text-[#2D241C] mb-8">{t("policies.privacy.title")}</h1>
 
         <div className="max-w-none text-gray-700 space-y-6">
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">1. Загальні положення</h2>
-            <p>
-              Компанія <strong>«ПРЯ-ПРЯ»</strong> поважає право кожного відвідувача на захист персональних даних та прагне забезпечити безпечне використання цього вебсайту.
-            </p>
-            <p>
-              Ця Політика конфіденційності пояснює, які персональні дані можуть збиратися під час використання сайту, з якою метою вони використовуються, як зберігаються та захищаються.
-            </p>
-            <p>
-              Користуючись цим вебсайтом, Ви погоджуєтеся з умовами цієї Політики конфіденційності.
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.privacy.section1")}</h2>
+            <p>{t("policies.privacy.section1Text1", { company: `«${company}»` })}</p>
+            <p>{t("policies.privacy.section1Text2")}</p>
+            <p>{t("policies.privacy.section1Text3")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">2. Які дані ми можемо збирати</h2>
-            <p>
-              Під час використання сайту ми можемо отримувати лише ту інформацію, яку Ви добровільно надаєте нам, зокрема:
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.privacy.section2")}</h2>
+            <p>{t("policies.privacy.section2Text1")}</p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>ім'я;</li>
-              <li>номер телефону;</li>
-              <li>адресу електронної пошти;</li>
-              <li>повідомлення, надіслані через форму зворотного зв'язку.</li>
+              <li>{t("policies.privacy.section2Item1")}</li>
+              <li>{t("policies.privacy.section2Item2")}</li>
+              <li>{t("policies.privacy.section2Item3")}</li>
+              <li>{t("policies.privacy.section2Item4")}</li>
             </ul>
-            <p className="mt-4">
-              Також можуть автоматично збиратися технічні дані, необхідні для коректної роботи вебсайту, такі як IP-адреса, тип браузера, операційна система та інформація про пристрій.
-            </p>
+            <p className="mt-4">{t("policies.privacy.section2Text2")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">3. Для чого ми використовуємо Ваші дані</h2>
-            <p>
-              Отримана інформація використовується виключно для:
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.privacy.section3")}</h2>
+            <p>{t("policies.privacy.section3Text1")}</p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>опрацювання Ваших звернень;</li>
-              <li>надання інформації про продукцію компанії;</li>
-              <li>зв'язку з клієнтами та партнерами;</li>
-              <li>покращення роботи вебсайту;</li>
-              <li>виконання вимог чинного законодавства України.</li>
+              <li>{t("policies.privacy.section3Item1")}</li>
+              <li>{t("policies.privacy.section3Item2")}</li>
+              <li>{t("policies.privacy.section3Item3")}</li>
+              <li>{t("policies.privacy.section3Item4")}</li>
+              <li>{t("policies.privacy.section3Item5")}</li>
             </ul>
-            <p className="mt-4">
-              Ми не продаємо, не передаємо та не розповсюджуємо Ваші персональні дані третім особам, окрім випадків, передбачених законодавством.
-            </p>
+            <p className="mt-4">{t("policies.privacy.section3Text2")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">4. Захист персональних даних</h2>
-            <p>
-              Компанія <strong>«ПРЯ-ПРЯ»</strong> застосовує сучасні організаційні та технічні заходи для захисту персональної інформації від несанкціонованого доступу, зміни, втрати або розголошення.
-            </p>
-            <p>
-              Попри це, жоден спосіб передачі інформації через мережу Інтернет не може гарантувати абсолютний рівень безпеки.
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.privacy.section4")}</h2>
+            <p>{t("policies.privacy.section4Text1", { company: `«${company}»` })}</p>
+            <p>{t("policies.privacy.section4Text2")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">5. Ваші права</h2>
-            <p>
-              Ви маєте право:
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.privacy.section5")}</h2>
+            <p>{t("policies.privacy.section5Text")}</p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>отримати інформацію щодо обробки Ваших персональних даних;</li>
-              <li>вимагати виправлення або оновлення своїх даних;</li>
-              <li>вимагати видалення персональних даних у випадках, передбачених законодавством;</li>
-              <li>відкликати свою згоду на обробку персональних даних.</li>
+              <li>{t("policies.privacy.section5Item1")}</li>
+              <li>{t("policies.privacy.section5Item2")}</li>
+              <li>{t("policies.privacy.section5Item3")}</li>
+              <li>{t("policies.privacy.section5Item4")}</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">6. Зміни до Політики конфіденційності</h2>
-            <p>
-              Компанія залишає за собою право вносити зміни до цієї Політики конфіденційності у разі необхідності.
-            </p>
-            <p>
-              Актуальна редакція документа завжди публікується на цій сторінці.
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.privacy.section6")}</h2>
+            <p>{t("policies.privacy.section6Text1")}</p>
+            <p>{t("policies.privacy.section6Text2")}</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">7. Контактна інформація</h2>
-            <p>
-              Якщо у Вас виникли запитання щодо цієї Політики конфіденційності або обробки персональних даних, будь ласка, зв'яжіться з нами.
-            </p>
-            <p className="font-semibold mt-4">
-              ПРЯ-ПРЯ
-            </p>
+            <h2 className="text-2xl font-semibold text-[#2D241C] mt-8 mb-4">{t("policies.privacy.section7")}</h2>
+            <p>{t("policies.privacy.section7Text")}</p>
+            <p className="font-semibold mt-4">{company}</p>
             <p className="space-y-2">
-              📍 Україна, вул. Стуса Василя, 11<br/>
+              📍 {t("common.footer.address")}<br/>
               ✉ E-mail:{' '}
               <a href="mailto:gbronshpak@gmail.com" className="text-[#FF9800] hover:text-[#FFB74D] underline">
                 gbronshpak@gmail.com
@@ -106,7 +84,7 @@ export default function PrivacyPolicy() {
 
           <section className="mt-8 pt-6 border-t border-gray-300">
             <p className="text-sm text-gray-600">
-              <strong>Останнє оновлення:</strong> червень 2026 року.
+              <strong>{t("policies.privacy.lastUpdated")}:</strong> {t("policies.privacy.lastUpdatedDate")}.
             </p>
           </section>
         </div>

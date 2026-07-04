@@ -3,12 +3,16 @@ export interface Product {
   slug: string;
   category: "cookies" | "gingerbread" | "eastern-sweets" | "candies" | "new";
   name_ua: string;
+  name_de?: string;
   description_ua: string;
+  description_de?: string;
   fullDescription_ua: string;
+  fullDescription_de?: string;
   image: string;
   gallery: string[];
   weight: string;
   ingredients: string[];
+  ingredients_de?: string[];
   nutritionPer100g: {
     calories: number;
     protein: number;
@@ -16,6 +20,7 @@ export interface Product {
     carbs: number;
   };
   shelfLife_ua: string;
+  shelfLife_de?: string;
 }
 
 export const products: Product[] = [
@@ -62,6 +67,11 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "120 діб",
+  name_de: "Knäckebrot «Körner»",
+  description_de: "Knuspriges Vollkornknäckebrot mit Sonnenblumen-, Leinsamen und Sesam.",
+  fullDescription_de: "Appetitliches und knuspriges Vollkornknäckebrot, verziert mit ausgewählten Sonnenblumen-, Leinsamen und Sesam. Die Kombination aus Getreidebasis und aromatischen Samen schafft einen intensiven Geschmack und angenehme knusprige Textur. Perfekt als leichter Snack oder Ergänzung zu Tee, Kaffee oder Käse.",
+  shelfLife_de: "120 Tage",
+  ingredients_de: ["Weizenmehl", "Sonnenblumenkerne", "Leinsamen", "Sesam", "Pflanzenöl", "Zucker", "Salz", "Triebmittel"],
 },
  {
   id: "3",
@@ -103,6 +113,11 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "90 діб",
+  name_de: "Keks «Amerikaner» mit Glasurstücken",
+  description_de: "Knuspriges Mürbeteigkeks mit Stücken von Konditorglasur.",
+  fullDescription_de: "Leckeres und aromatisches Mürbeteigkeks mit großzügigen Stücken von Konditorglasur. Die zarte bröckelige Textur und der intensive süße Geschmack schaffen eine perfekte Kombination zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "90 Tage",
+  ingredients_de: ["Weizenmehl", "Konditorglasur", "Zucker", "Pflanzenöl", "Eipulver", "Milchbasis", "Triebmittel", "Vanillin"],
 },
 {
   id: "22",
@@ -144,6 +159,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "90 діб",
+  name_de: "Keks «Amerikaner» mit Rosinen",
+  description_de: "Mürbes Buttergebäck mit süßen Rosinen.",
+  fullDescription_de: "Leckeres und aromatisches Buttergebäck mit ausgewählten Rosinen. Die zarte bröckelige Textur und die natürliche Süße der Rosinen schaffen einen harmonischen Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "90 Tage",
+  ingredients_de: ["Weizenmehl", "Rosinen", "Zucker", "Pflanzenöl", "Eipulver", "Milchbasis", "Triebmittel", "Vanillin"],
+
 },
 {
   id: "21",
@@ -184,6 +205,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "120 діб",
+  name_de: "Keks «Elza» mit Sesam",
+  description_de: "Mürbes Keks mit zartem Geschmack und aromatischem Sesam.",
+  fullDescription_de: "Leckeres und mürbes Keks mit Zugabe von aromatischem Sesam. Die zarte Textur und der angenehme süße Geschmack harmonieren wunderbar mit der leichten Nussnote des Sesams. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "120 Tage",
+  ingredients_de: ["Weizenmehl", "Sesam", "Zucker", "Pflanzenöl", "Eiprodukt", "Triebmittel"],
+
 },
  
   {
@@ -227,6 +254,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "120 діб",
+  name_de: "«Elza» mit Kokos und Glasurstücken",
+  description_de: "Buttergebäck mit Kokosfüllung und Stücken von Konditorglasur.",
+  fullDescription_de: "Leckeres Buttergebäck mit zarter Kokosfüllung und Stücken von Konditorglasur. Die Kombination aus knusprigem Keks, Kokosflocken und süßer Glasur schafft einen intensiven Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "120 Tage",
+  ingredients_de: ["Weizenmehl", "Kokosflocken", "Konditorglasur", "Zucker", "Pflanzenöl", "Kakaopulver", "Milchbasis"],
+
 },
 {
   id: "37",
@@ -264,6 +297,11 @@ export const products: Product[] = [
     fat: 28,
     carbs: 58,
   },
+  name_de: "Süßigkeit «Sonnenblume»",
+  description_de: "Glasierte Süßigkeit mit Kern aus karamellisierten Sonnenblumenkernen",
+  fullDescription_de: "Glasierte Süßigkeit mit knusprigem Kern aus karamellisierten Sonnenblumenkernen und zarter süßer Glasur.",
+  shelfLife_de: "120 Tage",
+  ingredients_de: ["Sonnenblumenkerne", "Zucker", "Karamell", "Glasur"],
 },
 {
   id: "39",
@@ -301,6 +339,12 @@ export const products: Product[] = [
     fat: 30,
     carbs: 55,
   },
+  name_de: "Süßigkeit «Shoreh»",
+  description_de: "Weicher Milch-Erdnuss-Grillage mit glasiertem Boden",
+  fullDescription_de: "Zarter Milch-Erdnuss-Grillage mit knusprigen Erdnussstücken und glasiertem Boden in süßer Schokoladenglasur.",
+  shelfLife_de: "180 Tage",
+  ingredients_de: ["Erdnüsse", "Milchmasse", "Zucker", "Schokoladenglasur"],
+
 },
 {
   id: "40",
@@ -338,6 +382,12 @@ export const products: Product[] = [
     fat: 31,
     carbs: 56,
   },
+  name_de: "Süßigkeit «Shoshik»",
+  description_de: "Glasierte Süßigkeit mit zartem Erdnuss-Milch-Körper",
+  fullDescription_de: "Glasierte Süßigkeit mit zartem Erdnuss-Milch-Körper in süßer Schokoladenglasur.",
+  shelfLife_de: "180 Tage",
+  ingredients_de: ["Erdnüsse", "Milchmasse", "Zucker", "Schokoladenglasur"],
+
 },
 
   // Пряники (Gingerbread)
@@ -381,6 +431,11 @@ export const products: Product[] = [
     fat: 12,
     carbs: 65,
   },
+  name_de: "Lebkuchen «Bayrischer mit Apfelmus»",
+  description_de: "Weiches und aromatisches Lebkuchen mit großer Menge Apfelmus",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen mit großer Menge Apfelmus in süßer Glasur und zarten Noten von Gewürzen.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Apfelmus", "Gewürze", "Glasur", "Eier"],
 },
   {
   id: "5",
@@ -422,6 +477,12 @@ export const products: Product[] = [
     fat: 12,
     carbs: 66,
   },
+  name_de: "Lebkuchen «Bayrischer mit Aprikosenmus»",
+  description_de: "Weiches und aromatisches Lebkuchen mit großer Menge Aprikosenmus",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen mit großer Menge Aprikosenmus in süßer Glasur und zarten Noten von Gewürzen.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Aprikosenmus", "Gewürze", "Glasur", "Eier"],
+
 },
   {
   id: "6",
@@ -462,6 +523,12 @@ export const products: Product[] = [
     fat: 12,
     carbs: 67,
   },
+  name_de: "Lebkuchen «Bayrischer mit Kirschmus»",
+  description_de: "Weiches und aromatisches Lebkuchen mit großer Menge Kirschmus",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen mit großer Menge Kirschmus in süßer Glasur und zarten Noten von Gewürzen.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Kirschmus", "Gewürze", "Glasur", "Eier"],
+
 },
 {
   id: "29",
@@ -501,6 +568,12 @@ export const products: Product[] = [
     fat: 12,
     carbs: 66,
   },
+  name_de: "Lebkuchen «Bayrischer mit Himbeermus»",
+  description_de: "Weiches und aromatisches Lebkuchen mit großer Menge Himbeermus",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen mit großer Menge Himbeermus in süßer Glasur und zarten Noten von Gewürzen.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Himbeermus", "Gewürze", "Glasur", "Eier"],
+
 },
 {
   id: "30",
@@ -541,6 +614,12 @@ export const products: Product[] = [
     fat: 12,
     carbs: 66,
   },
+  name_de: "Lebkuchen «Bayrischer mit Erdbeermus»",
+  description_de: "Weiches und aromatisches Lebkuchen mit großer Menge Erdbeermus",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen mit großer Menge Erdbeermus in süßer Glasur und zarten Noten von Gewürzen.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Erdbeermus", "Gewürze", "Glasur", "Eier"],
+
 },
 {
   id: "31",
@@ -580,6 +659,12 @@ export const products: Product[] = [
     fat: 11,
     carbs: 65,
   },
+  name_de: "Lebkuchen «Tee mit Honigaroma»",
+  description_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zarten Honigaromen",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zarten Honig- und aromatischen Gewürznoten.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Honig", "Gewürze", "Glasur", "Eier"],
+
 },
 {
   id: "32",
@@ -619,6 +704,12 @@ export const products: Product[] = [
     fat: 11,
     carbs: 64,
   },
+  name_de: "Lebkuchen «Tee mit Minzaroma»",
+  description_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zarten Minznoten",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zarten Minz- und aromatischen Gewürznoten.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Minze", "Gewürze", "Glasur", "Eier"],
+
 },
 {
   id: "33",
@@ -658,6 +749,12 @@ export const products: Product[] = [
     fat: 11,
     carbs: 65,
   },
+  name_de: "Lebkuchen «Tee mit Gebackene-Milch-Aroma»",
+  description_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zartem Gebackene-Milch-Geschmack",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zartem Gebackene-Milch-Geschmack und aromatischen Gewürznoten.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Gebackene Milch", "Gewürze", "Glasur", "Eier"],
+
 },
 {
   id: "34",
@@ -697,6 +794,12 @@ export const products: Product[] = [
     fat: 10,
     carbs: 63,
   },
+  name_de: "Lebkuchen «Roggen»",
+  description_de: "Weiches und aromatisches Roggenleben in süßer Glasur",
+  fullDescription_de: "Weiches und aromatisches Roggenlebkuchen in süßer Glasur mit zarten Gewürznoten und intensivem Roggenmehlgeschmack.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Roggenmehl", "Zucker", "Gewürze", "Glasur", "Eier", "Honig"],
+
 },
 {
   id: "34",
@@ -736,6 +839,12 @@ export const products: Product[] = [
     fat: 10,
     carbs: 64,
   },
+  name_de: "Lebkuchen «Mini glasiert»",
+  description_de: "Weiches und aromatisches Lebkuchen in süßer Glasur, das Erwachsenen und Kindern gleichermaßen schmeckt",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen in süßer Glasur, in kleiner Form, die Erwachsenen und Kindern gleichermaßen gefällt.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Honig", "Gewürze", "Glasur", "Eier"],
+
 },
 {
   id: "35",
@@ -775,6 +884,12 @@ export const products: Product[] = [
     fat: 11,
     carbs: 64,
   },
+  name_de: "Lebkuchen «Pfirsich»",
+  description_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zarten Pfirsichnoten",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zarten Pfirsichnoten und aromatischen Gewürzen.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Pfirsich-Aroma", "Gewürze", "Glasur", "Eier"],
+
 },
 {
   id: "36",
@@ -814,6 +929,12 @@ export const products: Product[] = [
     fat: 11,
     carbs: 64,
   },
+  name_de: "Lebkuchen mit Zimt",
+  description_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zarten Zimtnoten",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit zarten Zimtnoten und aromatischen Gewürzen.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Zimt", "Gewürze", "Glasur", "Eier"],
+
 },
 {
   id: "37",
@@ -854,6 +975,12 @@ export const products: Product[] = [
     fat: 13,
     carbs: 66,
   },
+  name_de: "Lebkuchen «Schokolade»",
+  description_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit ausgeprägtem Schokoladengeschmack",
+  fullDescription_de: "Weiches und aromatisches Lebkuchen in süßer Glasur mit ausgeprägtem Schokoladengeschmack und zarten aromatischen Gewürznoten.",
+  shelfLife_de: "30 Tage",
+  ingredients_de: ["Mehl", "Zucker", "Kakao", "Schokolade", "Gewürze", "Glasur", "Eier"],
+
 },
   // Східні солодощі (Eastern Sweets)
   {
@@ -886,6 +1013,12 @@ export const products: Product[] = [
     carbs: 26.5,
   },
   shelfLife_ua: "12 місяців від дати виробництва",
+  name_de: "Kozinaki «Khomka»",
+  description_de: "Knuspriger Kozinaki aus Sonnenblumenkernen",
+  fullDescription_de: "Leckerer und knuspriger Kozinaki aus ausgewählten Sonnenblumenkernen. Die Kombination aus karamellisierten Kernen und leichter Süße schafft einen intensiven Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "12 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Stärkesirup", "Zucker", "Sonnenblumenöl"],
+
 },
   {
   id: "7",
@@ -918,6 +1051,12 @@ export const products: Product[] = [
     carbs: 24.9,
   },
   shelfLife_ua: "6 місяців від дати виробництва",
+  name_de: "Kozinaki «Khomka» mit glasiertem Boden",
+  description_de: "Knuspriger Kozinaki aus ausgewählten Sonnenblumenkernen mit zartem Schokoladenboden.",
+  fullDescription_de: "Leckerer und knuspriger Kozinaki aus ausgewählten Sonnenblumenkernen mit zartem glasiertem Boden. Die Kombination aus karamellisierten Kernen und Schokoladenglasur schafft einen intensiven Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "6 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Konditorglasur", "Zucker", "Sirup", "Pflanzenöl"],
+
 },
 {
   id: "8",
@@ -958,6 +1097,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "6 місяців від дати виробництва",
+  name_de: "Kozinaki «Khomka» mit Honig",
+  description_de: "Knuspriger Kozinaki aus ausgewählten Sonnenblumenkernen mit natürlichem Honig.",
+  fullDescription_de: "Leckerer und knuspriger Kozinaki aus ausgewählten Sonnenblumenkernen mit natürlichem Honig. Die Kombination aus karamellisierten Kernen und Honigsüße schafft einen intensiven Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "6 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Natürlicher Honig", "Zucker", "Sirup", "Pflanzenöl"],
+
 },
 {
   id: "10",
@@ -989,6 +1134,12 @@ export const products: Product[] = [
     carbs: 58,
   },
   shelfLife_ua: "6 місяців від дати виробництва",
+  name_de: "Kozinaki mit Schokoladenbruch",
+  description_de: "Knuspriger Kozinaki aus Sonnenblumenkernen und Schokoladenbruch",
+  fullDescription_de: "Leckerer und aromatischer Kozinaki aus ausgewählten Sonnenblumenkernen und Schokoladenbruch. Die harmonische Kombination karamellisierter Kerne schafft einen intensiven Geschmack, und Schokoladenstücke fügen eine zarte süße Note und angenehmen Duft hinzu. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "6 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Schokoladenbruch", "Zucker", "Sirup", "Pflanzenöl"],
+
 },
 
  {
@@ -1031,6 +1182,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "6 місяців від дати виробництва",
+  name_de: "Süßigkeit «Khomka in Konditorglasur»",
+  description_de: "Knusprige Süßigkeit aus Sonnenblumenkernen in zarter Konditorglasur",
+  fullDescription_de: "Leckere und knusprige orientalische Süßigkeit aus ausgewählten Sonnenblumenkernen in zarter Konditorglasur. Die Kombination aus karamellisierten Kernen und Schokoladenglasur schafft einen intensiven Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "6 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Konditorglasur", "Zucker", "Pflanzenöl", "Kakaopulver", "Magermilchpulver", "Stärkesirup", "Sonnenblumenöl", "Vanillin"],
+
 },
 
 {
@@ -1063,6 +1220,12 @@ export const products: Product[] = [
     carbs: 38.8,
   },
   shelfLife_ua: "6 місяців від дати виробництва",
+  name_de: "Kozinaki aus Sonnenblumenkernen und Sesam",
+  description_de: "Knuspriger Kozinaki aus Sonnenblumenkernen und Sesam",
+  fullDescription_de: "Appetitlicher Kozinaki aus ausgewählten Sonnenblumenkernen und aromatischem Sesam. Die Kombination karamellisierter Kerne schafft einen intensiven süßen Geschmack, während Sesam eine zarte Nussnote und angenehmen Duft hinzufügt. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "6 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Sesam", "Zucker", "Sirup", "Pflanzenöl"],
+
 },
 {
   id: "41",
@@ -1103,6 +1266,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "6 місяців від дати виробництва",
+  name_de: "Kozinaki aus Sesam",
+  description_de: "Knuspriger Kozinaki aus ausgewähltem Sesam",
+  fullDescription_de: "Appetitlicher Kozinaki aus aromatischem Sesam. Die Kombination karamellisierten Sesams schafft einen intensiven süßen Geschmack, eine zarte Nussnote und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "6 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sesam", "Zucker", "Sirup", "Pflanzenöl"],
+
 },
  {
   id: "9",
@@ -1137,6 +1306,12 @@ export const products: Product[] = [
     carbs: 47.8,
   },
   shelfLife_ua: "6 місяців від дати виробництва",
+  name_de: "Süßigkeit «Amka» in Schokoladenglasur",
+  description_de: "Knusprige Süßigkeit aus Sonnenblumenkernen in zarter Schokoladenglasur",
+  fullDescription_de: "Leckere und knusprige Süßigkeit «Amka» aus ausgewählten Sonnenblumenkernen, überzogen mit zarter Schokoladenglasur. Die Kombination karamellisierter Kerne und Schokoladenhülle schafft einen intensiven süßen Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "6 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Konditorglasur", "Kakaopulver", "Zucker", "Sirup", "Pflanzenöl", "Emulgatoren", "Vanillin-Aroma"],
+
 },
 
 
@@ -1181,6 +1356,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "6 місяців від дати виробництва",
+  name_de: "Mix-Box «Khomka»",
+  description_de: "Sortiment aus knusprigen Kozinaki und Süßigkeiten in Konditorglasur",
+  fullDescription_de: "Mix-Box «Khomka» vereint zwei Lieblingsgeschmäcker in einer Verpackung: knusprige Kozinaki aus ausgewählten Sonnenblumenkernen und zarte Süßigkeiten in Konditorglasur. Karamellisierte Kerne schenken einen intensiven süßen Geschmack, und die Schokoladenglasur fügt angenehme Zartheit und Duft hinzu. Ideal zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "6 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Konditorglasur", "Zucker", "Pflanzenöl", "Kakaopulver", "Magermilchpulver", "Stärkesirup", "Sonnenblumenöl", "Vanillin"],
+
 },
 // Цукерки (Candies)
   {
@@ -1224,6 +1405,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "120 діб",
+  name_de: "Riegel «Tropik» in Konditorglasur",
+  description_de: "Glasierte Süßigkeit mit zartem Milch-Kokos-Körper.",
+  fullDescription_de: "Leckerer Riegel mit zartem Milch-Kokos-Körper in Konditorglasur. Die Kombination aus weicher Kokosfüllung und süßer Glasur schafft einen angenehmen cremigen Geschmack und zarten Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "120 Tage",
+  ingredients_de: ["Kokosflocken", "Konditorglasur", "Milchbasis", "Zucker", "Pflanzenöl"],
+
 },
 {
   id: "17",
@@ -1265,6 +1452,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "270 діб",
+  name_de: "Maisriegel «Shofit»",
+  description_de: "Knuspriger Riegel aus Maiskugeln in zarter Glasur.",
+  fullDescription_de: "Leckerer und knuspriger Riegel aus einer Mischung von Maiskugeln mit Haferflocken, Leinsamen und Sesam in Karamellsirup. Die Kombination aus luftiger Textur und süßer Glasur schafft angenehmen Geschmack und Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "270 Tage",
+  ingredients_de: ["Maiskugeln", "Haferflocken", "Leinsamen", "Sesam", "Karamellsirup", "Konditorglasur"],
+
 },
 {
   id: "18",
@@ -1307,6 +1500,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "270 діб",
+  name_de: "Maisriegel «Shofit» mit Cranberry",
+  description_de: "Knuspriger Riegel aus Maiskugeln und Cranberry in Karamellsirup.",
+  fullDescription_de: "Leckerer und knuspriger Riegel aus einer Mischung von Maiskugeln mit Haferflocken, Leinsamen und Sesam mit Cranberry in Karamellsirup. Die Kombination aus luftiger Textur, leichter Cranberry-Säure und süßem Sirup schafft einen intensiven Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "270 Tage",
+  ingredients_de: ["Maiskugeln", "Haferflocken", "Cranberry", "Leinsamen", "Sesam", "Karamellsirup", "Konditorglasur"],
+
 },
 {
   id: "19",
@@ -1348,6 +1547,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "270 діб",
+  name_de: "Maisriegel mit Kokos",
+  description_de: "Knuspriger Maisriegel mit zartem Kokosgeschmack.",
+  fullDescription_de: "Leckerer Riegel aus luftigen Maiskugeln mit Zugabe von Kokosflocken, Leinsamen und Sesam in aromatischem Karamellsirup. Die Kombination aus knuspriger Textur und zartem Kokosgeschmack schafft einen angenehmen süßen Duft und leichten tropischen Nachgeschmack. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "270 Tage",
+  ingredients_de: ["Maiskugeln", "Kokosflocken", "Karamellsirup", "Leinsamen", "Sesam", "Zucker"],
+
 },
 {
   id: "20",
@@ -1389,6 +1594,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "270 діб",
+  name_de: "Maisriegel mit Aprikosen",
+  description_de: "Knuspriger Maisriegel mit natürlichen Aprikosen und Karamellgeschmack.",
+  fullDescription_de: "Leckerer Riegel aus luftigen Maiskugeln mit Haferflocken, Sesam und Aprikosenstücken in aromatischem Karamellsirup. Die Kombination aus knuspriger Textur und zarter Fruchtsäure der Aprikosen schafft einen intensiven süßen Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "270 Tage",
+  ingredients_de: ["Maiskugeln", "Haferflocken", "Aprikosen", "Sesam", "Karamellsirup", "Zucker"],
+
 },
 
 
@@ -1421,6 +1632,12 @@ export const products: Product[] = [
     carbs: 38.8,
   },
   shelfLife_ua: "6 місяців від дати виробництва",
+  name_de: "Sezamka",
+  description_de: "Knuspriger Kozinaki aus Sonnenblumenkernen und Sesam",
+  fullDescription_de: "Appetitlicher Kozinaki aus ausgewählten Sonnenblumenkernen und aromatischem Sesam. Die Kombination karamellisierter Kerne schafft einen intensiven süßen Geschmack, während Sesam eine zarte Nussnote und angenehmen Duft hinzufügt. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "6 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Sesam", "Zucker", "Sirup", "Pflanzenöl"],
+
 },
   {
   id: "26",
@@ -1450,6 +1667,12 @@ export const products: Product[] = [
     carbs: 26.5,
   },
   shelfLife_ua: "12 місяців від дати виробництва",
+  name_de: "Kozinaki «Khomka»",
+  description_de: "Knuspriger Kozinaki aus Sonnenblumenkernen",
+  fullDescription_de: "Leckerer und knuspriger Kozinaki aus ausgewählten Sonnenblumenkernen. Die Kombination karamellisierter Kerne und leichter Süße schafft einen intensiven Geschmack und angenehmen Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "12 Monate ab Herstellungsdatum",
+  ingredients_de: ["Sonnenblumenkerne", "Stärkesirup", "Zucker", "Sonnenblumenöl"],
+
 },
   {
   id: "27",
@@ -1521,6 +1744,12 @@ export const products: Product[] = [
   },
 
   shelfLife_ua: "120 діб",
+  name_de: "Riegel «Shokosik» in Konditorglasur",
+  description_de: "Glasierte Süßigkeit mit zartem Milch-Kokos-Körper.",
+  fullDescription_de: "Leckerer Riegel mit zartem Milch-Kokos-Körper in Konditorglasur. Die Kombination aus weicher Kokosfüllung und süßer Glasur schafft einen angenehmen cremigen Geschmack und zarten Duft. Perfekt zu Tee, Kaffee oder als süßer Snack während des Tages.",
+  shelfLife_de: "120 Tage",
+  ingredients_de: ["Kokosflocken", "Konditorglasur", "Milchbasis", "Zucker", "Pflanzenöl"],
+
 },
 ];
 

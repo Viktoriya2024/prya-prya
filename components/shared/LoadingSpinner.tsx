@@ -1,6 +1,8 @@
 "use client";
+import { useTranslation } from "react-i18next";
 
 export default function LoadingSpinner() {
+  const { t } = useTranslation();
   return (
     <div className="flex items-center justify-center py-20">
       <div className="text-center">
@@ -19,7 +21,7 @@ export default function LoadingSpinner() {
             />
           </svg>
         </div>
-        <p className="text-gray-600 mt-4">Завантаження...</p>
+        <p className="text-gray-600 mt-4">{t("productGrid.loading")}</p>
       </div>
     </div>
   );

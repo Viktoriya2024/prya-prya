@@ -27,7 +27,7 @@ export default function AboutStaff() {
             <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-orange-100 bg-white hover:shadow-3xl transition-all duration-500">
               <Image
                 src="/teamPrya.png"
-                alt="Співробітники"
+                alt={t("about.staff.imageAlt")}
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />

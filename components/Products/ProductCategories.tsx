@@ -1,6 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+
+export default function ProductCategories() {
+  const { t } = useTranslation();
+  const categoryNames = t("products.categories.items", { returnObjects: true }) as string[];
 
 interface Category {
   id: string;
@@ -9,15 +14,13 @@ interface Category {
   slug: string;
 }
 
-const categories: Category[] = [
-  { id: "cookies", name: "Печиво", image: "/coockies.png", slug: "cookies" },
-   { id: "gingerbread", name: "Пряники", image: "/pryaniki.png", slug: "gingerbread" }, 
-  { id: "oriental", name: "Східні солодощі", image: "/shidniSolodoshi2.png", slug: "eastern-sweets" },
-  { id: "candies", name: "Цукерки", image: "/smallbox.png", slug: "candies" },
-  { id: "new", name: "Новинки", image: "/news.png", slug: "new" },
-];
-
-export default function ProductCategories() {
+  const categories: Category[] = [
+    { id: "cookies", name: categoryNames[0], image: "/coockies.png", slug: "cookies" },
+    { id: "gingerbread", name: categoryNames[1], image: "/pryaniki.png", slug: "gingerbread" },
+    { id: "oriental", name: categoryNames[2], image: "/shidniSolodoshi2.png", slug: "eastern-sweets" },
+    { id: "candies", name: categoryNames[3], image: "/smallbox.png", slug: "candies" },
+    { id: "new", name: categoryNames[4], image: "/news.png", slug: "new" },
+  ];
   return (
     <section
       id="categories"
@@ -28,13 +31,13 @@ export default function ProductCategories() {
         {/* Section Title */}
         <div className="text-center mb-14 sm:mb-16 md:mb-20">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-5 tracking-tight">
-            Категорії продукції
+            {t("products.categories.title")}
           </h2>
 
           <div className="w-24 h-1.5 bg-linear-to-b from-[#FF9800] to-[#FFB74D] rounded-full mx-auto mb-5"></div>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Оберіть категорію, щоб переглянути асортимент
+            {t("products.categories.description")}
           </p>
         </div>
 

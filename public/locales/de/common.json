@@ -70,7 +70,9 @@
         "save": "Einstellungen speichern",
         "acceptAll": "Alle akzeptieren",
         "close": "Schließen"
-      }
+      },
+      "settingsLabel": "Cookie-Einstellungen",
+      "settingsButtonTitle": "Cookie-Einstellungen öffnen"
     }
   },
   "home": {
@@ -116,27 +118,49 @@
     }
   },
   "products": {
+    "hero": {
+      "title": "Unsere Produkte",
+      "description": "Breites Sortiment an hochwertigen natürlichen Confiserie-Produkten. Kekse, Lebkuchen, Waffeln und vieles mehr — alles für Ihren Genuss.",
+      "cta": "Katalog anzeigen"
+    },
     "categories": {
       "title": "Produktkategorien",
-      "subtitle": "Wählen Sie eine Kategorie, um das Sortiment zu sehen",
-      "cookies": "Kekse",
-      "gingerbread": "Lebkuchen",
-      "orientalSweets": "Orientalische Süßigkeiten",
-      "candies": "Bonbons",
-      "new": "Neuheiten"
-    },
-    "hero": {
-      "subtitle": "PRY-PRY",
-      "title": "Produkte"
+      "description": "Wählen Sie eine Kategorie, um das Sortiment zu durchsuchen",
+      "items": [
+        "Kekse",
+        "Lebkuchen",
+        "Orientalische Süßigkeiten",
+        "Bonbons",
+        "Neuheiten"
+      ]
     },
     "quality": {
-      "title": "Qualität, der Sie vertrauen können",
-      "description": "Jedes Produkt wird mit Liebe und höchsten Qualitätsstandards hergestellt"
+      "title": "Warum uns wählen",
+      "subtitle": "Qualität und Natürlichkeit sind unsere Hauptprioritäten",
+      "features": [
+        {
+          "title": "Natürliche Zutaten",
+          "description": "Wir verwenden nur ökologisch saubere Zutaten ohne GMO und künstliche Zusatzstoffe"
+        },
+        {
+          "title": "Qualitätskontrolle",
+          "description": "Jedes Produkt durchläuft eine mehrstufige Qualitätskontrolle in allen Produktionsphasen"
+        },
+        {
+          "title": "Frische der Produkte",
+          "description": "Wir produzieren täglich in kleinen Chargen, um Frische zu garantieren"
+        },
+        {
+          "title": "Moderne Ausrüstung",
+          "description": "Wir verwenden die modernste Ausrüstung führender Hersteller"
+        }
+      ]
     },
     "cta": {
-      "title": "Bereit zum Probieren?",
-      "description": "Bestellen Sie unsere Produkte jetzt",
-      "button": "Bestellen"
+      "title": "Möchten Sie unsere Produkte bestellen?",
+      "description": "Kontaktieren Sie uns, um mehr über das Sortiment, Geschäftsbedingungen und Möglichkeiten für die Bestellung großer Chargen für Ihr Geschäft zu erfahren.",
+      "contactBtn": "Kontaktieren Sie uns",
+      "learnBtn": "Mehr erfahren"
     }
   },
   "contact": {
@@ -147,15 +171,23 @@
       "title": "Kontakte",
       "subtitle": "Haben Sie Fragen oder möchten Sie bestellen? Schreiben Sie uns – wir helfen gerne!",
       "contactWithUs": "Kontaktieren Sie uns",
+      "writeUs": "Schreiben Sie uns",
       "address": "Adresse",
       "fullAddress": "Ukraine, ul. Stussa Vasylya, 11",
-      "ceo": "Vorsitzender des Verwaltungsrats",
-      "commercialDirector": "Geschäftsdirektor",
+      "ceo": "Vorsitzender des Aufsichtsrats",
+      "commercialDirector": "Kaufmännischer Direktor",
       "name": "Name",
+      "nameLabel": "Ihr Name *",
+      "namePlaceholder": "Geben Sie Ihren Namen ein",
       "email": "E-Mail",
+      "emailLabel": "E-Mail *",
       "phone": "Telefon",
+      "phoneLabel": "Telefon",
       "message": "Nachricht",
+      "messageLabel": "Nachricht *",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrer Anfrage...",
       "send": "Senden",
+      "sendButton": "Nachricht senden",
       "sending": "Wird gesendet...",
       "successMessage": "Danke! Ihre Nachricht wurde versendet.",
       "errorMessage": "Fehler beim Senden. Bitte versuchen Sie es erneut.",
@@ -167,31 +199,70 @@
         "dateTime": "Datum und Uhrzeit",
         "message": "Nachricht",
         "footer": "Dies ist eine automatische Nachricht. Bitte antworten Sie nicht auf diese E-Mail."
-      }
+      },
+      "ceoName": "Hennadiy Bronshpak",
+      "commercialDirectorName": "Wjatscheslaw Salnikow",
+      "sendErrorMessage": "Fehler beim Senden. Bitte versuchen Sie es erneut."
     }
   },
   "about": {
     "hero": {
-      "title": "Über Uns",
-      "description": "Die Süßwarenfabrik TM «Pry-Pry» steht für Qualität, Geschmack und Tradition. Wir stellen natürliche Süßwaren her, die unsere Kunden seit über 8 Jahren erfreuen. Jedes Produkt wird mit Liebe und Sorgfalt für Ihre Gesundheit hergestellt."
+      "title": "Über uns",
+      "description": "Die Confiserie-Fabrik TM «Pria-Pria» ist Qualität, Geschmack und Tradition. Wir schaffen natürliche Confiserie-Produkte, die unsere Kunden seit mehr als 8 Jahren erfreuen. Jedes Produkt wird mit Liebe und Sorgfalt um Ihre Gesundheit hergestellt."
     },
     "factory": {
-      "title": "Über die Fabrik"
+      "title": "Confiserie-Fabrik TM «Pria-Pria»",
+      "description": "Gegründet 2015, gehören wir zu den dynamischsten Confiserie-Unternehmen der Ukraine. Wir nutzen modernste Technologien in der Herstellung unserer Confiserie-Produkte und kombinieren diese mit traditionellen Rezepten des Hausbackens. In unseren Produktrezepturen vereinen sich die besten Traditionen der ukrainischen Confiserie-Kunst mit führenden internationalen Backrezepten.",
+      "imageAlt": "Konditorei-Fabrik TM «Prya-Prya»"
     },
     "production": {
-      "title": "Produktion"
+      "title": "Produktion",
+      "features": [
+        "⚙️ Moderne Ausrüstung",
+        "✔ Qualitätskontrolle",
+        "🌿 Natürliche Zutaten"
+      ],
+      "description": "Unser Betrieb ist mit der modernsten Ausrüstung führender Hersteller ausgestattet. Wir halten die höchsten Qualitätsstandards in allen Phasen des Produktionsprozesses ein.",
+      "cta": "Mehr erfahren",
+      "imageAlt": "Produktion"
+    },
+    "products": {
+      "title": "Unsere Produkte",
+      "description": "Wir bieten ein breites Sortiment an Confiserie-Produkten an: Kekse, Lebkuchen, Waffeln, Marshmallows und vieles mehr. Die Produkte werden auf der modernsten Ausrüstung führender Hersteller hergestellt. Nur ökologisch saubere Zutaten werden verwendet.",
+      "cta": "Produkte durchsuchen",
+      "imageAlt": "Unsere Produkte"
     },
     "quality": {
-      "title": "Qualität"
+      "title": "Qualität",
+      "description": "Das Unternehmen geht ernsthaft an die Qualitätskontrolle heran. Alle Produkte durchlaufen eine mehrstufige Qualitätskontrolle. Wir haben alle erforderlichen Zertifikate und Genehmigungen. Unser Ziel ist es, die höchste Qualität von Confiserie-Produkten zu gewährleisten, die unsere Kunden durch ihren Geschmack und ihre Frische erfreuen.",
+      "imageAlt": "Qualität"
     },
     "staff": {
-      "title": "Unser Team"
-    },
-    "partners": {
-      "title": "Partner"
+      "title": "Mitarbeiter",
+      "description": "Das Unternehmen kümmert sich um die ständige Weiterbildung der Mitarbeiter. Unser Team besteht aus hochqualifizierten Fachleuten, die ihre Arbeit lieben. Wir schaffen komfortable Arbeitsbedingungen und unterstützen eine freundliche Atmosphäre im Team. Der Professionalismus unserer Mitarbeiter ist die Garantie für die Qualität unserer Produkte.",
+      "imageAlt": "Mitarbeiter"
     },
     "values": {
-      "title": "Unsere Werte"
+      "titles": [
+        "Qualität",
+        "Natürlichkeit",
+        "Geschmack",
+        "Sicherheit"
+      ],
+      "label": "Unser Ansatz",
+      "heading": "Unsere Werte",
+      "description": "Wir gehen mit voller Verantwortung an jeden Arbeitsschritt heran und streben danach, dass unsere Produkte den Verbrauchern tadellosen Geschmack, gleichbleibende Qualität und Sicherheit bei jedem Produkt bieten."
+    },
+    "partners": {
+      "partners": [
+        "METRO",
+        "KLASS",
+        "Foodex",
+        "Lais",
+        "AGROSMIX GROUP"
+      ],
+      "title": "Unsere Partner vertrauen uns",
+      "description": "Wir arbeiten mit führenden Einzelhandelsketten und Distributoren in der Ukraine und Europa zusammen"
     }
   },
   "production": {
@@ -203,6 +274,32 @@
     }
   },
   "policies": {
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "section1": "1. Allgemeine Bestimmungen",
+      "section1Text1": "Willkommen auf der offiziellen Website des Unternehmens {{company}}.",
+      "section1Text2": "Durch die Nutzung dieser Website bestätigen Sie Ihr Einverständnis mit diesen Nutzungsbedingungen. Wenn Sie mit einer der Bestimmungen dieses Dokuments nicht einverstanden sind, bitten wir Sie, die Nutzung der Website einzustellen.",
+      "section2": "2. Nutzung der Website",
+      "section2Text1": "Die auf dieser Website veröffentlichten Materialien dienen ausschließlich Informationszwecken.",
+      "section2Text2": "Der Nutzer verpflichtet sich, die Website gemäß den geltenden Rechtsvorschriften zu nutzen und keine Handlungen vorzunehmen, die deren Betrieb stören oder dem Unternehmen oder anderen Nutzern schaden könnten.",
+      "section3": "3. Geistiges Eigentum",
+      "section3Text1": "Alle auf dieser Website veröffentlichten Materialien, einschließlich Texte, Fotos, Grafiken, Logos, Design und andere Elemente, sind Eigentum des Unternehmens {{company}} oder werden auf legaler Grundlage genutzt.",
+      "section3Text2": "Jedes Kopieren, Verbreiten, Ändern oder Verwenden von Materialien ohne schriftliche Zustimmung des Unternehmens ist verboten, sofern nicht gesetzlich anders vorgesehen.",
+      "section4": "4. Haftungsbeschränkung",
+      "section4Text1": "Das Unternehmen bemüht sich, die Aktualität und Richtigkeit der auf der Website veröffentlichten Informationen sicherzustellen.",
+      "section4Text2": "Das Unternehmen garantiert jedoch nicht das vollständige Fehlen technischer Fehler oder vorübergehender Betriebsunterbrechungen der Website und haftet nicht für Schäden, die durch die Nutzung oder Unmöglichkeit der Nutzung dieser Website entstehen können.",
+      "section5": "5. Links zu externen Ressourcen",
+      "section5Text1": "Die Website kann Links zu externen Webressourcen enthalten.",
+      "section5Text2": "Das Unternehmen {{company}} übernimmt keine Verantwortung für den Inhalt, die Datenschutzrichtlinie oder den Betrieb solcher Ressourcen.",
+      "section6": "6. Änderungen der Nutzungsbedingungen",
+      "section6Text1": "Das Unternehmen behält sich das Recht vor, diese Nutzungsbedingungen jederzeit ohne vorherige Ankündigung zu ändern oder zu aktualisieren.",
+      "section6Text2": "Die aktuelle Fassung des Dokuments ist stets auf dieser Seite verfügbar.",
+      "section7": "7. Kontaktinformationen",
+      "section7Text": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, wenden Sie sich bitte an uns.",
+      "lastUpdated": "Letzte Aktualisierung",
+      "lastUpdatedDate": "Juni 2026",
+      "company": "PRY-PRY"
+    },
     "privacy": {
       "title": "Datenschutzrichtlinie",
       "section1": "1. Allgemeine Bestimmungen",
@@ -238,6 +335,8 @@
       "section6Text2": "Die aktuelle Version des Dokuments wird immer auf dieser Seite veröffentlicht.",
       "section7": "7. Kontaktinformationen",
       "section7Text": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie oder der Verarbeitung personenbezogener Daten haben, kontaktieren Sie uns bitte.",
+      "lastUpdated": "Letzte Aktualisierung",
+      "lastUpdatedDate": "Juni 2026",
       "company": "PRY-PRY"
     },
     "cookies": {
@@ -276,11 +375,119 @@
       "section6SubText": "Die aktuelle Version des Dokuments ist jederzeit auf dieser Seite verfügbar.",
       "section7": "7. Kontaktinformationen",
       "section7Text": "Wenn Sie Fragen zur Cookie-Nutzung oder zur Verarbeitung personenbezogener Daten haben, kontaktieren Sie uns bitte.",
+      "lastUpdated": "Letzte Aktualisierung",
+      "lastUpdatedDate": "Juni 2026",
       "analytics": "Google Analytics 4",
       "company": "PRY-PRY"
-    },
-    "terms": {
-      "title": "Nutzungsbedingungen"
     }
+  },
+  "productionPage": {
+    "hero": {
+      "company": "Pria-Pria",
+      "title": "Produktion",
+      "description": "Moderne Confiserie-Produktion in der Ukraine mit automatisierten Linien, Qualitätskontrolle und natürlichen Zutaten.",
+      "cta": "Mehr erfahren"
+    },
+    "dough": {
+      "stage": "Stufe 1",
+      "title": "Teigvorbereitungsanlage",
+      "text1": "In dieser Phase werden der Teig für zukünftige Confiserie-Produkte vorbereitet und geformt. Moderne Ausrüstung sorgt für genaue Dosierung der Zutaten und eine stabile Teigkonsistenz.",
+      "text2": "Die Qualitätskontrolle in dieser Phase ermöglicht es uns, eine ideale Grundlage für Kekse und Lebkuchen zu schaffen, was stabilen Geschmack und hohe Produktqualität garantiert."
+    },
+    "baking": {
+      "stage": "Stufe 2",
+      "title": "Backanlage",
+      "text1": "In dieser Phase gelangen die geformten Produkte in die Öfen, wo der Backprozess für Lebkuchen, Kekse und andere Confiserie-Produkte stattfindet.",
+      "text2": "Die Kontrolle von Temperatur, Backzeit und technologischen Parametern ermöglicht es, eine gleichmäßige Struktur, goldene Farbe, angenehmen Aroma und stabile Qualität jedes Produktcharges zu erreichen."
+    },
+    "forming": {
+      "stage": "Stufe 3",
+      "title": "Glasuranlage",
+      "text1": "In dieser Phase gelangen die fertigen Produkte nach dem Backen zur Glasurlinie, wo sie mit einer gleichmäßigen Schicht aus Schokoladen- oder Zuckerglasur überzogen werden. Moderne Ausrüstung sorgt für genaues Auftragen der Beschichtung und stabile Qualität jedes Produktcharges.",
+      "text2": "Die Kontrolle von Temperatur, Glasurdichte und Fördergeschwindigkeit ermöglicht es, ein ideales Aussehen, attraktiven Glanz und intensiven Geschmack der Produkte zu erreichen. Nach der Glasur wird die Produktion zur Kühlung geleitet, um die Beschichtung zu fixieren und auf das weitere Verpacken vorzubereiten."
+    },
+    "packing": {
+      "stage": "Stufe 5",
+      "title": "Verpackungsanlage",
+      "text1": "In dieser Abteilung werden die fertigen Produkte automatisch in Flow-Pack-Verpackungen verpackt, um Frische, Qualität und Transportkomfort zu gewährleisten.",
+      "text2": "Die automatisierte Verpackung garantiert Hermetik, ästhetisches Aussehen und lange Haltbarkeit jedes Produkts und bewahrt dessen Frische und Geschmacksqualitäten.",
+      "imageAlt": "Formierungsanlage"
+    },
+    "finalBlock": {
+      "features": [
+        {
+          "title": "Moderne Ausrüstung",
+          "description": "Automatisierte Linien führender Hersteller"
+        },
+        {
+          "title": "Qualitätskontrolle",
+          "description": "Mehrstufige Kontrolle in jeder Phase"
+        },
+        {
+          "title": "Zuverlässige Verpackung",
+          "description": "Hermetische Verpackung für lange Lagerung"
+        }
+      ],
+      "label": "Produktionsvorteile",
+      "title": "Technologien, denen vertraut wird",
+      "description": "Die Kombination moderner Ausrüstung, automatisierter Produktionslinien und Qualitätskontrolle ermöglicht es uns, Produkte stabiler Qualität zu schaffen, die modernen Produktionsstandards entsprechen."
+    }
+  },
+  "productCategories": {
+    "cookies": {
+      "title": "Kekse",
+      "subtitle": "Klassische Kekse aus den besten Zutaten"
+    },
+    "gingerbread": {
+      "title": "Lebkuchen",
+      "subtitle": "Traditionelle Honiglebkuchen nach Geheimrezept"
+    },
+    "eastern-sweets": {
+      "title": "Orientalische Süßigkeiten",
+      "subtitle": "Premium Kozinaks und Verkostungsmischungen"
+    },
+    "candies": {
+      "title": "Bonbons",
+      "subtitle": "Luxus Bonbons für die anspruchsvollsten Genießer"
+    },
+    "new": {
+      "title": "Neuheiten",
+      "subtitle": "Neue Geschmäcker und Kombinationen"
+    }
+  },
+  "productDetail": {
+    "loading": "Produkt wird geladen...",
+    "notFound": "Produkt nicht gefunden",
+    "notAvailable": "Entschuldigung, dieses Produkt ist nicht mehr verfügbar",
+    "backToProducts": "Zurück zu Produkten",
+    "products": "Produkte",
+    "sizeLabel": "Verpackungsgröße",
+    "nutritionLabel": "Nährwerte pro 100g",
+    "calories": "Kalorien",
+    "caloriesUnit": "kcal",
+    "protein": "Protein",
+    "proteinUnit": "g",
+    "fat": "Fett",
+    "fatUnit": "g",
+    "carbs": "Kohlenhydrate",
+    "carbsUnit": "g",
+    "ingredients": "Zutaten",
+    "detailsButton": "Details",
+    "askCooperation": "Geschäftsbedingungen anfragen",
+    "backToCategory": "Zurück zur Kategorie",
+    "storageConditions": "Lagerbedingungen",
+    "storageText": "An trockenen, sauberen, gut belüfteten Lagern ohne fremde Gerüche und Ungeziefer lagern. Lagertemperatur +18°C bis +3°C, relative Luftfeuchtigkeit nicht über 75%. Direkte Sonneneinstrahlung vermeiden.",
+    "shelfLifeHeader": "Haltbarkeitsdauer",
+    "b2bOrders": "Für Großbestellungen",
+    "b2bText": "Produkte sind für Lieferungen an Geschäfte, Supermärkte, Einzelhandelsketten und Distributoren verfügbar. Kontaktieren Sie uns für spezielle Angebote.",
+    "similarProducts": "Ähnliche Produkte",
+    "otherProductsCategory": "Andere Produkte aus der Kategorie",
+    "swipeHint": "Wischen zum Navigieren"
+  },
+  "productGrid": {
+    "loading": "Produkte werden geladen...",
+    "noProducts": "Keine Produkte",
+    "noProductsDesc": "Entschuldigung, in dieser Kategorie sind noch keine Produkte verfügbar",
+    "backToProducts": "Zurück zu den Produkten"
   }
 }

@@ -32,7 +32,7 @@ export default function AboutFactory() {
               <div className="relative w-full h-full bg-white rounded-full overflow-hidden shadow-xl border border-orange-100 hover:shadow-2xl transition-all duration-500">
                 <Image
                   src="/anim-prya-prya.gif"
-                  alt="Кондитерська фабрика ТМ «Пря-Пря»"
+                  alt={t("about.factory.imageAlt")}
                   fill
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-700"
                 />

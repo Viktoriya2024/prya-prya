@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Breadcrumb from "@/components/shared/Breadcrumb";
+import { useTranslation } from "react-i18next";
 
 interface CategoryBannerProps {
   title: string;
@@ -13,6 +14,7 @@ export default function CategoryBanner({
   subtitle,
   colorClass,
 }: CategoryBannerProps) {
+  const { t } = useTranslation();
   return (
     <div className={`relative py-12 md:py-20 bg-linear-to-r ${colorClass}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
@@ -20,7 +22,7 @@ export default function CategoryBanner({
         <div className="mb-6">
           <Breadcrumb
             items={[
-              { label: "Продукція", href: "/products" },
+              { label: t("common.navigation.products"), href: "/products" },
               { label: title },
             ]}
           />

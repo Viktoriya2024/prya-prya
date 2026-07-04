@@ -2,6 +2,7 @@
 import ProductCard from "./ProductCard";
 import EmptyState from "@/components/shared/EmptyState";
 import { Product } from "@/data/products";
+import { useTranslation } from "react-i18next";
 
 interface ProductGridProps {
   products: Product[];
@@ -14,6 +15,8 @@ export default function ProductGrid({
   category,
   isLoading = false,
 }: ProductGridProps) {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
   if (isLoading) {
     return (
       <div className="flex items-center justify-center py-20">
@@ -33,7 +36,7 @@ export default function ProductGrid({
               />
             </svg>
           </div>
-          <p className="text-gray-600 mt-4">Завантаження продуктів...</p>
+          <p className="text-gray-600 mt-4">{t("productGrid.loading")}</p>
         </div>
       </div>
     );
@@ -42,9 +45,9 @@ export default function ProductGrid({
   if (!products || products.length === 0) {
     return (
       <EmptyState
-        title="Немає продуктів"
-        description="Вибачте, в цій категорії поки немає продуктів"
-        actionLabel="Назад до продукції"
+        title={t("productGrid.noProducts")}
+        description={t("productGrid.noProductsDesc")}
+        actionLabel={t("productGrid.backToProducts")}
         actionHref="/products"
       />
     );
@@ -57,8 +60,8 @@ export default function ProductGrid({
           <div key={product.id} className="flex justify-center">
             <ProductCard
               id={product.id}
-              name={product.name_ua}
-              description={product.description_ua}
+              name={lang === "de" && product.name_de ? product.name_de : product.name_ua}
+              description={lang === "de" && product.description_de ? product.description_de : product.description_ua}
               image={product.image}
               weight={product.weight}
               category={category}

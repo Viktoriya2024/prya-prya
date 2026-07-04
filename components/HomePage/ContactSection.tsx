@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactSection() {
+  const { t } = useTranslation();
   const [status, setStatus] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -29,11 +31,11 @@ export default function ContactSection() {
         setTimeout(() => setStatus(""), 5000);
       } else {
         setStatus("error");
-        setErrorMessage(data.error || "Помилка відправки. Будь ласка, спробуйте ще раз.");
+        setErrorMessage(data.error || t("common.errors.sendError"));
       }
     } catch (err) {
       setStatus("error");
-      setErrorMessage("Помилка відправки. Будь ласка, спробуйте ще раз.");
+        setErrorMessage(t("contact.form.sendErrorMessage"));
     }
   }
 
@@ -44,11 +46,11 @@ export default function ContactSection() {
         {/* MODERN SECTION HEADER */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            Контакти
+            {t("contact.form.title")}
           </h2>
           <div className="w-20 h-1 bg-linear-to-r from-[#ff9800] to-[#ffb74d] rounded-full mx-auto mb-6"></div>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto font-light">
-            Маєте питання або хочете замовити? Напишіть нам — ми з радістю допоможемо!
+            {t("contact.form.subtitle")}
           </p>
         </div>
 
@@ -59,7 +61,7 @@ export default function ContactSection() {
             {/* CONTACT INFO SIDE */}
             <div className="bg-linear-to-br from-orange-50 to-yellow-50/50 p-8 md:p-12 lg:p-14">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-                Зв'яжіться з нами
+                {t("contact.form.contactWithUs")}
               </h3>
 
               <div className="space-y-6 mb-10">
@@ -68,15 +70,15 @@ export default function ContactSection() {
                     <span className="text-2xl">📍</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900 mb-1">Адреса</p>
-                    <p className="text-gray-600 text-sm md:text-base">Україна, вул. Стуса Василя, 11</p>
+                    <p className="font-semibold text-gray-900 mb-1">{t("contact.form.address")}</p>
+                    <p className="text-gray-600 text-sm md:text-base">{t("contact.form.fullAddress")}</p>
                   </div>
                 </div>
 
                 {/* Contact Person 1: Геннадий Броншпак */}
                 <div className="border-t pt-6">
-                  <p className="font-semibold text-gray-900 mb-1">Председатель совета директоров</p>
-                  <p className="text-gray-700 font-bold mb-3">Геннадий Броншпак</p>
+                  <p className="font-semibold text-gray-900 mb-1">{t("contact.form.ceo")}</p>
+                  <p className="text-gray-700 font-bold mb-3">{t("contact.form.ceoName")}</p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="text-lg">☎</span>
@@ -101,8 +103,8 @@ export default function ContactSection() {
 
                 {/* Contact Person 2: Сальников Вячеслав */}
                 <div className="border-t pt-6">
-                  <p className="font-semibold text-gray-900 mb-1">Коммерческий директор</p>
-                  <p className="text-gray-700 font-bold mb-3">Сальников Вячеслав</p>
+                  <p className="font-semibold text-gray-900 mb-1">{t("contact.form.commercialDirector")}</p>
+                  <p className="text-gray-700 font-bold mb-3">{t("contact.form.commercialDirectorName")}</p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="text-lg">☎</span>
@@ -119,60 +121,34 @@ export default function ContactSection() {
                   </div>
                 </div>
               </div>              
-
-              {/* MESSENGER BUTTONS - Removed */}
             </div>
 
             {/* FORM SIDE */}
             <div className="p-8 md:p-12 lg:p-14">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-                Напишіть нам
+                {t("contact.form.writeUs")}
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Ваше ім'я *
+                    {t("contact.form.nameLabel")}
                   </label>
                   <input 
-                    className="
-                      w-full px-4 py-3.5
-                      bg-gray-50
-                      border-2 border-gray-200
-                      rounded-xl
-                      text-gray-900
-                      placeholder-gray-400
-                      focus:bg-white
-                      focus:border-[#ff9800]
-                      focus:ring-4 focus:ring-orange-100/50
-                      outline-none
-                      transition-all duration-300
-                    " 
+                    className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:border-[#ff9800] focus:ring-4 focus:ring-orange-100/50 outline-none transition-all duration-300" 
                     name="name" 
                     required 
-                    placeholder="Введіть ваше ім'я"
+                    placeholder={t("contact.form.namePlaceholder")}
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Email *
+                    {t("contact.form.emailLabel")}
                   </label>
                   <input 
                     type="email"
-                    className="
-                      w-full px-4 py-3.5
-                      bg-gray-50
-                      border-2 border-gray-200
-                      rounded-xl
-                      text-gray-900
-                      placeholder-gray-400
-                      focus:bg-white
-                      focus:border-[#ff9800]
-                      focus:ring-4 focus:ring-orange-100/50
-                      outline-none
-                      transition-all duration-300
-                    " 
+                    className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:border-[#ff9800] focus:ring-4 focus:ring-orange-100/50 outline-none transition-all duration-300" 
                     name="email" 
                     required 
                     placeholder="your@email.com"
@@ -181,23 +157,11 @@ export default function ContactSection() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Телефон
+                    {t("contact.form.phoneLabel")}
                   </label>
                   <input 
                     type="tel"
-                    className="
-                      w-full px-4 py-3.5
-                      bg-gray-50
-                      border-2 border-gray-200
-                      rounded-xl
-                      text-gray-900
-                      placeholder-gray-400
-                      focus:bg-white
-                      focus:border-[#ff9800]
-                      focus:ring-4 focus:ring-orange-100/50
-                      outline-none
-                      transition-all duration-300
-                    " 
+                    className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:border-[#ff9800] focus:ring-4 focus:ring-orange-100/50 outline-none transition-all duration-300" 
                     name="phone" 
                     placeholder="+380 (00) 000-00-00"
                   />
@@ -205,49 +169,23 @@ export default function ContactSection() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Повідомлення *
+                    {t("contact.form.messageLabel")}
                   </label>
                   <textarea 
-                    className="
-                      w-full px-4 py-3.5
-                      bg-gray-50
-                      border-2 border-gray-200
-                      rounded-xl
-                      text-gray-900
-                      placeholder-gray-400
-                      focus:bg-white
-                      focus:border-[#ff9800]
-                      focus:ring-4 focus:ring-orange-100/50
-                      outline-none
-                      transition-all duration-300
-                      resize-none
-                    " 
+                    className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:bg-white focus:border-[#ff9800] focus:ring-4 focus:ring-orange-100/50 outline-none transition-all duration-300 resize-none" 
                     name="message" 
                     required 
                     rows={4} 
-                    placeholder="Розкажіть нам про ваш запит..."
+                    placeholder={t("contact.form.messagePlaceholder")}
                   />
                 </div>
 
                 <button 
                   type="submit"
                   disabled={status === "loading"}
-                  className="
-                    group w-full inline-flex items-center justify-center gap-3
-                    bg-linear-to-r from-[#ff9800] to-[#ffb74d]
-                    hover:from-[#ff9800] hover:to-[#ff9800]
-                    text-white font-bold text-base md:text-lg
-                    py-4 px-8
-                    rounded-xl
-                    shadow-[0_6px_24px_rgba(255,152,0,0.3)]
-                    hover:shadow-[0_10px_32px_rgba(255,152,0,0.5)]
-                    hover:scale-[1.02]
-                    transition-all duration-300
-                    border-2 border-white/20
-                    disabled:opacity-70 disabled:cursor-not-allowed
-                  "
+                  className="group w-full inline-flex items-center justify-center gap-3 bg-linear-to-r from-[#ff9800] to-[#ffb74d] hover:from-[#ff9800] hover:to-[#ff9800] text-white font-bold text-base md:text-lg py-4 px-8 rounded-xl shadow-[0_6px_24px_rgba(255,152,0,0.3)] hover:shadow-[0_10px_32px_rgba(255,152,0,0.5)] hover:scale-[1.02] transition-all duration-300 border-2 border-white/20 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <span>{status === "loading" ? "Надсилання..." : "Надіслати повідомлення"}</span>
+                  <span>{status === "loading" ? t("contact.form.sending") : t("contact.form.sendButton")}</span>
                   {status !== "loading" && (
                     <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -258,13 +196,13 @@ export default function ContactSection() {
                 {status === "success" && (
                   <div className="bg-green-50 border-2 border-green-200 rounded-xl p-4 flex items-center gap-3">
                     <span className="text-2xl">✓</span>
-                    <p className="text-green-700 font-semibold">Дякуємо! Ваше повідомлення надіслано.</p>
+                    <p className="text-green-700 font-semibold">{t("contact.form.successMessage")}</p>
                   </div>
                 )}
                 {status === "error" && (
                   <div className="bg-red-50 border-2 border-red-200 rounded-xl p-4 flex items-center gap-3">
                     <span className="text-2xl">✕</span>
-                    <p className="text-red-700 font-semibold">{errorMessage || "Помилка відправки. Будь ласка, спробуйте ще раз."}</p>
+                    <p className="text-red-700 font-semibold">{errorMessage || t("contact.form.errorMessage")}</p>
                   </div>
                 )}
               </form>

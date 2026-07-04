@@ -53,7 +53,7 @@ export default function AboutProduction() {
             <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-white hover:shadow-3xl transition-all duration-500">
               <Image
                 src="/ProductBackery.png"
-                alt="Виробництво"
+                alt={t("about.production.imageAlt")}
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />

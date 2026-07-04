@@ -3,31 +3,42 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
 
 export default function Footer() {
+  const { t } = useTranslation();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const currentYear = new Date().getFullYear();
 
   const navigationLinks = [
-    { label: 'Головна', href: '/' },
-    { label: 'Про нас', href: '/about' },
-    { label: 'Продукція', href: '/products' },
-    { label: 'Виробництво', href: '/production' },
-    { label: 'Вакансії', href: '/vacancy' },
-    { label: 'Контакти', href: '/contact' },
+    { label: t("common.footer.links.home"), href: "/" },
+    { label: t("common.footer.links.about"), href: "/about" },
+    { label: t("common.footer.links.products"), href: "/products" },
+    { label: t("common.footer.links.production"), href: "/production" },
+    { label: t("common.footer.links.vacancies"), href: "/vacancy" },
+    { label: t("common.footer.links.contacts"), href: "/contact" },
   ];
 
   const informationLinks = [
-    { label: 'Політика конфіденційності', href: '/privacy-policy' },
-    { label: 'Політика Cookies', href: '/cookie-policy' },
-    { label: 'Умови використання', href: '/terms-of-use' },
+    { label: t("common.footer.links.privacyPolicy"), href: "/privacy-policy" },
+    { label: t("common.footer.links.cookiePolicy"), href: "/cookie-policy" },
+    { label: t("common.footer.links.termsOfUse"), href: "/terms-of-use" },
   ];
 
   const contactInfo = [
-    { icon: MapPin, text: 'Україна, вул. Стуса Василя, 11' },
-    { icon: Phone, text: '+4915140416749', href: 'tel:+4915140416749' },
-    { icon: Phone, text: '+380503258008', href: 'tel:+380503258008' },
-    { icon: Mail, text: 'gbronshpak@gmail.com', href: 'mailto:gbronshpak@gmail.com' },
+    { icon: MapPin, text: t("common.footer.address") },
+    { icon: Phone, text: "+4915140416749", href: "tel:+4915140416749" },
+    { icon: Phone, text: "+380503258008", href: "tel:+380503258008" },
+    { icon: Mail, text: "gbronshpak@gmail.com", href: "mailto:gbronshpak@gmail.com" },
   ];
+
+  if (!mounted) return null;
 
   return (
     <footer className="w-full">
@@ -35,7 +46,7 @@ export default function Footer() {
       <section className="bg-[#F5EFE0] py-4 sm:py-6">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm sm:text-base font-light text-[#2D241C]">
-            Працюємо по всій Україні та відкриті до міжнародної співпраці.
+            {t("common.footer.workingArea")}
           </p>
         </div>
       </section>
@@ -60,7 +71,7 @@ export default function Footer() {
 
               {/* Description */}
               <p className="text-xs leading-relaxed text-gray-400">
-                Традиції української якості.
+                {t("common.footer.slogan")}
               </p>
 
               {/* Contact Info */}
@@ -69,7 +80,7 @@ export default function Footer() {
                   const Icon = item.icon;
                   const content = (
                     <div className="flex items-start gap-2">
-                      <Icon className="h-4 w-4 flex-shrink-0 text-[#FFB74D] mt-0.5" />
+                      <Icon className="h-4 w-4 shrink-0 text-[#FFB74D] mt-0.5" />
                       <span className="text-xs text-gray-400">{item.text}</span>
                     </div>
                   );
@@ -94,7 +105,7 @@ export default function Footer() {
 
             {/* Column 2: Navigation */}
             <div className="flex flex-col space-y-2">
-              <h4 className="text-sm font-semibold tracking-wide">Навігація</h4>
+              <h4 className="text-sm font-semibold tracking-wide">{t("common.footer.navigationTitle")}</h4>
               <nav className="space-y-1.5">
                 {navigationLinks.map((link) => (
                   <Link
@@ -110,7 +121,7 @@ export default function Footer() {
 
             {/* Column 3: Information */}
             <div className="flex flex-col space-y-2">
-              <h4 className="text-sm font-semibold tracking-wide">Інформація</h4>
+              <h4 className="text-sm font-semibold tracking-wide">{t("common.footer.informationTitle")}</h4>
               <nav className="space-y-1.5">
                 {informationLinks.map((link) => (
                   <Link
@@ -130,8 +141,8 @@ export default function Footer() {
 
           {/* Bottom Bar */}
           <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
-            <p>© {currentYear} ПРЯ-ПРЯ. Всі права захищені.</p>
-            <p>Made in Ukraine 🇺🇦</p>
+            <p>{t("common.footer.copyright", { year: currentYear })}</p>
+            <p>{t("common.footer.madeIn")}</p>
           </div>
         </div>
       </div>

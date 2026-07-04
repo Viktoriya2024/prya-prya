@@ -181,7 +181,7 @@ export default function ProductImageGallery({
       {isModalOpen && (
         <div
           ref={modalRef}
-          className="fixed inset-0 z-[9999] bg-black/35 backdrop-blur-md flex flex-col items-center justify-center"
+          className="fixed inset-0 z-9999 bg-black/35 backdrop-blur-md flex flex-col items-center justify-center"
           onClick={() => setIsModalOpen(false)}
           role="dialog"
           aria-modal="true"
@@ -190,7 +190,7 @@ export default function ProductImageGallery({
           {/* Close Button - Top Right */}
           <button
             onClick={() => setIsModalOpen(false)}
-            className="absolute top-6 right-6 z-[9999] p-3 hover:bg-white/20 rounded-full transition-all active:scale-90 backdrop-blur-sm hover:scale-110"
+            className="absolute top-6 right-6 z-9999 p-3 hover:bg-white/20 rounded-full transition-all active:scale-90 backdrop-blur-sm hover:scale-110"
             aria-label="Close gallery"
             title="Close (ESC)"
           >

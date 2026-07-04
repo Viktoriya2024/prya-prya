@@ -1,21 +1,34 @@
-import Link from "next/link";
+"use client";
 
-const products = [
-  {
-    name: "Козинак із кунжутом",
-    image: "/products/homka2.png",
-  },
-  {
-    name: "«Хомка» з глазурованим дном",
-    image: "/products/kozinak3.png",
-  },
-  {
-    name: "Батончик «Тропік» у кондитерській глазурі",
-    image: "/products/kokosik.png",
-  },
-];
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ProductsSlider() {
+  const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const products = [
+    {
+      name: t("home.products.items.kozinakSesame"),
+      image: "/products/homka2.png",
+    },
+    {
+      name: t("home.products.items.homka"),
+      image: "/products/kozinak3.png",
+    },
+    {
+      name: t("home.products.items.tropic"),
+      image: "/products/kokosik.png",
+    },
+  ];
+
+  if (!mounted) return null;
+
   return (
     <section className="py-20 md:py-28 bg-linear-to-b from-[#FFF8F1] via-white to-[#F8F7F5] w-full">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -23,11 +36,11 @@ export default function ProductsSlider() {
         {/* MODERN SECTION HEADER */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            ПРОДУКЦІЯ
+            {t("home.products.title")}
           </h2>
           <div className="w-20 h-1 bg-linear-to-r from-[#ff9800] to-[#ffb74d] rounded-full mx-auto mb-4"></div>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto font-light">
-            Відкрийте для себе наші смачні та натуральні кондитерські вироби
+            {t("home.products.subtitle")}
           </p>
         </div>
 
@@ -69,7 +82,7 @@ export default function ProductsSlider() {
 
               {/* HOVER OVERLAY WITH SUBTLE BADGE */}
               <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-[#ff9800] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
-                Переглянути →
+                {t("home.products.view")}
               </div>
             </div>
           ))}
@@ -92,7 +105,7 @@ export default function ProductsSlider() {
             transition-all duration-500
             border-2 border-white/20
           ">
-            <span>ПЕРЕЙТИ ДО РОЗДІЛУ ПРОДУКЦІЇ</span>
+            <span>{t("common.buttons.moreProducts")}</span>
             <svg 
               className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
               fill="none" 

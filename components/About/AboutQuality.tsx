@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function AboutQuality() {
+  const { t } = useTranslation();
   return (
     <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 overflow-hidden bg-linear-to-b  dark:border-gray-800 dark:bg-gray-900">
       <div className="relative z-20">
@@ -10,13 +12,13 @@ export default function AboutQuality() {
           {/* TEXT CONTENT */}
           <div className="md:w-1/2 w-full space-y-4 sm:space-y-5 md:space-y-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold text-white mb-3 sm:mb-4 leading-tight tracking-tight text-center md:text-left">
-              Якість
+              {t("about.quality.title")}
             </h2>
             
             <div className="w-16 sm:w-20 h-1 bg-linear-to-r from-[#FF9800] to-[#FFB74D] rounded-full mx-auto md:mx-0"></div>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-300 leading-relaxed font-semibold whitespace-pre-line text-center md:text-left">
-              Компанія серйозно підходить до управління якістю продукції. Вся продукція проходить багаторівневий контроль якості. Ми маємо всі необхідні сертифікати та дозволи. Наша мета — забезпечити найвищу якість кондитерських виробів, які будуть радувати наших покупців своїм смаком та свіжістю.
+              {t("about.quality.description")}
             </p>
           </div>
 

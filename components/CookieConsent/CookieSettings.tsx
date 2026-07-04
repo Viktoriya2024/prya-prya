@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface CookieConsent {
   necessary: boolean;
@@ -22,6 +23,7 @@ export default function CookieSettings({
   onClose,
 }: CookieSettingsProps) {
   const [localConsent, setLocalConsent] = useState(consent);
+  const { t } = useTranslation();
 
   const handleToggle = (key: keyof CookieConsent) => {
     if (key === 'necessary') return; // Necessary can't be disabled
@@ -40,11 +42,11 @@ export default function CookieSettings({
       <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="bg-linear-to-r from-[#FF9800] to-[#FFB74D] px-6 py-4 flex items-center justify-between">
-          <h2 className="text-xl font-bold text-white">Налаштування cookies</h2>
+          <h2 className="text-xl font-bold text-white">{t("common.cookies.settings.title")}</h2>
           <button
             onClick={onClose}
             className="text-white hover:bg-white/20 p-1 rounded-lg transition-colors duration-200"
-            aria-label="Закрити"
+            aria-label={t("common.buttons.close")}
           >
             <X size={24} />
           </button>
@@ -55,9 +57,9 @@ export default function CookieSettings({
           {/* Necessary Cookies */}
           <div className="flex items-start gap-4 pb-4 border-b border-gray-200">
             <div className="flex-1">
-              <h3 className="font-semibold text-gray-900 mb-1">Необхідні cookies</h3>
+              <h3 className="font-semibold text-gray-900 mb-1">{t("common.cookies.settings.necessary")}</h3>
               <p className="text-sm text-gray-600">
-                Забезпечують базову роботу сайту та його безпеку.
+                {t("common.cookies.settings.necessaryDescription")}
               </p>
             </div>
             <div className="flex items-center">
@@ -70,17 +72,17 @@ export default function CookieSettings({
           {/* Analytical Cookies */}
           <div className="flex items-start gap-4">
             <div className="flex-1">
-              <h3 className="font-semibold text-gray-900 mb-1">Аналітичні cookies</h3>
+              <h3 className="font-semibold text-gray-900 mb-1">{t("common.cookies.settings.analytics")}</h3>
               <p className="text-sm text-gray-600">
-                Допомагають нам розуміти, як користувачі взаємодіють із сайтом, щоб його покращувати.
+                {t("common.cookies.settings.analyticsDescription")}
               </p>
             </div>
             <button
               onClick={() => handleToggle('analytics')}
-              className={`relative inline-block w-12 h-7 rounded-full transition-colors duration-300 flex-shrink-0 ${
+              className={`relative inline-block w-12 h-7 rounded-full transition-colors duration-300 shrink-0 ${
                 localConsent.analytics ? 'bg-[#FF9800]' : 'bg-gray-300'
               }`}
-              aria-label="Переключити аналітичні cookies"
+              aria-label={t("common.cookies.settings.analytics")}
             >
               <div
                 className={`absolute top-1 ${
@@ -97,13 +99,13 @@ export default function CookieSettings({
             onClick={handleSave}
             className="flex-1 px-4 py-2.5 text-sm font-semibold text-white bg-[#FF9800] hover:bg-[#F57C00] rounded-lg transition-colors duration-200"
           >
-            Зберегти налаштування
+            {t("common.cookies.settings.save")}
           </button>
           <button
             onClick={onAcceptAll}
             className="flex-1 px-4 py-2.5 text-sm font-semibold text-[#FF9800] bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors duration-200 border border-orange-200"
           >
-            Прийняти всі
+            {t("common.cookies.settings.acceptAll")}
           </button>
         </div>
       </div>

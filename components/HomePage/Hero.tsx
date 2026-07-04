@@ -3,13 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
+    setMounted(true);
     setIsVisible(true);
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <section id="home" className="relative w-full h-[85vh] sm:h-[90vh] md:h-[92vh] lg:h-screen min-h-[600px]" >
@@ -36,19 +42,19 @@ export default function Hero() {
         {/* Decorative Top Element */}
         <div className="mb-6 flex items-center gap-3">
           <div className="w-12 h-0.5 bg-linear-to-r from-transparent via-orange-400 to-orange-300 rounded-full" />
-          <span className="text-orange-300 text-sm md:text-base drop-shadow-md font-bold tracking-[0.5em] uppercase">З любов'ю створено</span>
+          <span className="text-orange-300 text-sm md:text-base drop-shadow-md font-bold tracking-[0.5em] uppercase">{t("home.hero.subtitle")}</span>
           <div className="w-12 h-0.5 bg-linear-to-l from-transparent via-orange-400 to-orange-300 rounded-full" />
         </div>
           
         {/* MAIN TITLE - Larger and More Expressive */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[1.1] drop-shadow-[0_8px_24px_rgba(0,0,0,0.4)] mb-4 tracking-tight">
-          <span className="block">Фабрика</span>
-          <span className="block text-orange-300">кондитерських виробів</span>
+          <span className="block">{t("home.hero.title1")}</span>
+          <span className="block text-orange-300">{t("home.hero.title2")}</span>
         </h1>
         
         {/* SUBTITLE - More Space and Impact */}
         <h2 className="mt-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-[0_4px_16px_rgba(0,0,0,0.5)] tracking-wide text-orange-100">
-          НАТУРАЛЬНЕ, ТОМУ І СМАЧНЕ!
+          {t("home.hero.description")}
         </h2>
 
         {/* Decorative Divider */}
@@ -72,7 +78,7 @@ export default function Hero() {
             border-2 border-white/20
           "
         >
-          <span>Обрати смаколики</span>
+          <span>{t("home.hero.cta")}</span>
           <svg 
             className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
             fill="none" 

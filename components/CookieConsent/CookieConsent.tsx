@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import CookieSettings from './CookieSettings';
+import { useTranslation } from 'react-i18next';
 
 interface CookieConsent {
   necessary: boolean;
@@ -16,6 +17,7 @@ export default function CookieConsent() {
     analytics: false,
   });
   const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation();
 
   // Initialize on client side only
   useEffect(() => {
@@ -98,10 +100,10 @@ export default function CookieConsent() {
               {/* Text Content */}
               <div className="flex-1">
                 <h3 className="text-lg font-bold text-[#2D241C] mb-2">
-                  Ми використовуємо cookies
+                  {t("common.cookies.title")}
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Ми використовуємо необхідні cookies для роботи сайту та аналітичні cookies, щоб покращувати наш вебсайт. Ви можете прийняти всі cookies або відхилити необов'язкові.
+                  {t("common.cookies.description")}
                 </p>
               </div>
 
@@ -111,21 +113,21 @@ export default function CookieConsent() {
                   onClick={handleReject}
                   className="px-4 py-2.5 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200 border border-gray-300"
                 >
-                  Відхилити
+                  {t("common.buttons.reject")}
                 </button>
 
                 <button
                   onClick={() => setShowSettings(true)}
                   className="px-4 py-2.5 text-sm font-semibold text-[#FF9800] bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors duration-200 border border-orange-200"
                 >
-                  Налаштування
+                  {t("common.cookies.settings.title")}
                 </button>
 
                 <button
                   onClick={handleAcceptAll}
                   className="px-6 py-2.5 text-sm font-semibold text-white bg-[#FF9800] hover:bg-[#F57C00] rounded-lg transition-colors duration-200"
                 >
-                  Прийняти всі
+                  {t("common.buttons.accept")}
                 </button>
               </div>
             </div>

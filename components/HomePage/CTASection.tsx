@@ -1,6 +1,19 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function CTASection() {
+  const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <section className="bg-linear-to-r from-[#d48002] to-[#d3a259] text-white py-16 sm:py-8 md:py-10 lg:py-12">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
@@ -19,11 +32,11 @@ export default function CTASection() {
           {/* Content */}
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-5 md:mb-6 tracking-tight">
-              Маєте питання?
+              {t("home.cta.title")}
             </h2>
             
             <p className="text-base sm:text-lg md:text-xl text-gray-600 font-normal mb-8 sm:mb-10 md:mb-12 leading-relaxed">
-              Зв'яжіться з нами — ми з радістю допоможемо.
+              {t("home.cta.description")}
             </p>
             
             <Link 
@@ -43,7 +56,7 @@ export default function CTASection() {
                 transition-all duration-300
               "
             >
-              <span>Зв'язатися з нами</span>
+              <span>{t("home.cta.button")}</span>
               <svg 
                 className="w-5 h-5 sm:w-6 sm:h-6 transform group-hover:translate-x-1 transition-transform duration-300" 
                 fill="none" 

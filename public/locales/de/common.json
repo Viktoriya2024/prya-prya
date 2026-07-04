@@ -1,0 +1,286 @@
+{
+  "common": {
+    "buttons": {
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "accept": "Akzeptieren",
+      "reject": "Ablehnen",
+      "close": "Schließen",
+      "learnMore": "Mehr erfahren",
+      "contactUs": "Kontaktieren Sie uns",
+      "viewDetails": "Weitere Details",
+      "moreProducts": "ZUR PRODUKTKATEGORIE",
+      "selectTreats": "Süßigkeiten auswählen"
+    },
+    "navigation": {
+      "home": "startseite",
+      "about": "über uns",
+      "products": "produkte",
+      "production": "produktion",
+      "vacancies": "stellenangebote",
+      "contacts": "kontakte",
+      "language": "DE/UK",
+      "menu": {
+        "open": "Menü öffnen",
+        "close": "Menü schließen"
+      }
+    },
+    "footer": {
+      "slogan": "Tradition ukrainischer Qualität.",
+      "address": "Ukraine, ul. Stussa Vasylya, 11",
+      "workingArea": "Wir arbeiten landesweit und sind offen für internationale Zusammenarbeit.",
+      "navigationTitle": "Navigation",
+      "informationTitle": "Information",
+      "copyright": "© {{year}} PRY-PRY. Alle Rechte vorbehalten.",
+      "madeIn": "Made in Ukraine 🇺🇦",
+      "links": {
+        "home": "Startseite",
+        "about": "Über uns",
+        "products": "Produkte",
+        "production": "Produktion",
+        "vacancies": "Stellenangebote",
+        "contacts": "Kontakte",
+        "privacyPolicy": "Datenschutzrichtlinie",
+        "cookiePolicy": "Cookie-Richtlinie",
+        "termsOfUse": "Nutzungsbedingungen"
+      },
+      "contact": {
+        "address": "Adresse",
+        "phone": "Telefon",
+        "email": "E-Mail"
+      }
+    },
+    "errors": {
+      "required": "Dieses Feld ist erforderlich",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "nameRequired": "Der Name ist erforderlich",
+      "messageRequired": "Die Nachricht ist erforderlich",
+      "contactRequired": "E-Mail oder Telefon ist erforderlich",
+      "sendError": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+    },
+    "cookies": {
+      "title": "Wir verwenden Cookies",
+      "description": "Wir verwenden notwendige Cookies für die Website-Funktion und Analyse-Cookies, um unsere Website zu verbessern. Sie können alle Cookies akzeptieren oder optionale ablehnen.",
+      "settings": {
+        "title": "Cookie-Einstellungen",
+        "necessary": "Notwendige Cookies",
+        "necessaryDescription": "Gewährleisten die Grundfunktion der Website und deren Sicherheit.",
+        "analytics": "Analyse-Cookies",
+        "analyticsDescription": "Helfen uns zu verstehen, wie Benutzer mit der Website interagieren, um sie zu verbessern.",
+        "save": "Einstellungen speichern",
+        "acceptAll": "Alle akzeptieren",
+        "close": "Schließen"
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Mit Liebe gemacht",
+      "title1": "Konditorei",
+      "title2": "Süßwarenfabrik",
+      "description": "NATÜRLICH, DESHALB KÖSTLICH!",
+      "cta": "Süßigkeiten auswählen"
+    },
+    "about": {
+      "title": "Über Uns",
+      "slogan": "«Natürlich, deshalb köstlich!»",
+      "description1": "Unter Befolgung des Prinzips {{slogan}} gehen wir mit voller Verantwortung an die Aufgaben heran und verfolgen die Strategie, höchste Produktqualität durch die Verwendung nur natürlicher und ökologisch reiner Inhaltsstoffe zu gewährleisten.",
+      "description2": "Wir verwenden fortschrittliche Technologien in der Süßwarenherstellung sowie traditionelle Rezepte der Hausbackerei. Unsere Produktrezepturen verbinden die besten Traditionen der ukrainischen Süßwarenherstellung mit führenden Backrezepten der Welt.",
+      "cta": "Weitere Details"
+    },
+    "features": {
+      "title": "Warum wählen Sie uns?",
+      "delicious": "KÖSTLICH",
+      "deliciousDesc": "Unvergesslicher Geschmack",
+      "healthy": "GESUND",
+      "healthyDesc": "Natürliche Inhaltsstoffe",
+      "quality": "QUALITÄT",
+      "qualityDesc": "Geprüfte Qualität",
+      "affordable": "GÜNSTIG",
+      "affordableDesc": "Faire Preise"
+    },
+    "products": {
+      "title": "PRODUKTE",
+      "subtitle": "Entdecken Sie unsere köstlichen und natürlichen Süßwaren",
+      "items": {
+        "kozinakSesame": "Halva mit Sesam",
+        "homka": "«Homka» mit glasiertem Boden",
+        "tropic": "«Tropic» Schokoriegel mit Zuckerglasur"
+      },
+      "view": "Weitere Infos →"
+    },
+    "cta": {
+      "title": "Haben Sie Fragen?",
+      "description": "Kontaktieren Sie uns – wir helfen gerne weiter.",
+      "button": "Kontaktieren Sie uns"
+    }
+  },
+  "products": {
+    "categories": {
+      "title": "Produktkategorien",
+      "subtitle": "Wählen Sie eine Kategorie, um das Sortiment zu sehen",
+      "cookies": "Kekse",
+      "gingerbread": "Lebkuchen",
+      "orientalSweets": "Orientalische Süßigkeiten",
+      "candies": "Bonbons",
+      "new": "Neuheiten"
+    },
+    "hero": {
+      "subtitle": "PRY-PRY",
+      "title": "Produkte"
+    },
+    "quality": {
+      "title": "Qualität, der Sie vertrauen können",
+      "description": "Jedes Produkt wird mit Liebe und höchsten Qualitätsstandards hergestellt"
+    },
+    "cta": {
+      "title": "Bereit zum Probieren?",
+      "description": "Bestellen Sie unsere Produkte jetzt",
+      "button": "Bestellen"
+    }
+  },
+  "contact": {
+    "page": {
+      "title": "Kontakte"
+    },
+    "form": {
+      "title": "Kontakte",
+      "subtitle": "Haben Sie Fragen oder möchten Sie bestellen? Schreiben Sie uns – wir helfen gerne!",
+      "contactWithUs": "Kontaktieren Sie uns",
+      "address": "Adresse",
+      "fullAddress": "Ukraine, ul. Stussa Vasylya, 11",
+      "ceo": "Vorsitzender des Verwaltungsrats",
+      "commercialDirector": "Geschäftsdirektor",
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "message": "Nachricht",
+      "send": "Senden",
+      "sending": "Wird gesendet...",
+      "successMessage": "Danke! Ihre Nachricht wurde versendet.",
+      "errorMessage": "Fehler beim Senden. Bitte versuchen Sie es erneut.",
+      "emails": {
+        "newMessage": "Neue Nachricht von der PRY-PRY Website",
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "dateTime": "Datum und Uhrzeit",
+        "message": "Nachricht",
+        "footer": "Dies ist eine automatische Nachricht. Bitte antworten Sie nicht auf diese E-Mail."
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Über Uns",
+      "description": "Die Süßwarenfabrik TM «Pry-Pry» steht für Qualität, Geschmack und Tradition. Wir stellen natürliche Süßwaren her, die unsere Kunden seit über 8 Jahren erfreuen. Jedes Produkt wird mit Liebe und Sorgfalt für Ihre Gesundheit hergestellt."
+    },
+    "factory": {
+      "title": "Über die Fabrik"
+    },
+    "production": {
+      "title": "Produktion"
+    },
+    "quality": {
+      "title": "Qualität"
+    },
+    "staff": {
+      "title": "Unser Team"
+    },
+    "partners": {
+      "title": "Partner"
+    },
+    "values": {
+      "title": "Unsere Werte"
+    }
+  },
+  "production": {
+    "hero": {
+      "company": "Pry-Pry",
+      "title": "Produktion",
+      "description": "Moderne Süßwarenproduktion in der Ukraine mit automatisierten Linien, Qualitätskontrolle und natürlichen Inhaltsstoffen.",
+      "cta": "Mehr erfahren"
+    }
+  },
+  "policies": {
+    "privacy": {
+      "title": "Datenschutzrichtlinie",
+      "section1": "1. Allgemeine Bestimmungen",
+      "section1Text1": "Das Unternehmen {{company}} respektiert das Recht aller Besucher auf Schutz persönlicher Daten und ist bestrebt, eine sichere Nutzung dieser Website zu gewährleisten.",
+      "section1Text2": "Diese Datenschutzrichtlinie erläutert, welche persönlichen Daten während der Nutzung der Website erfasst werden, zu welchem Zweck sie verwendet werden, und wie sie gespeichert und geschützt werden.",
+      "section1Text3": "Durch die Nutzung dieser Website erklären Sie sich mit den Bedingungen dieser Datenschutzrichtlinie einverstanden.",
+      "section2": "2. Welche Daten können wir erfassen",
+      "section2Text1": "Bei der Nutzung der Website können wir nur die Informationen erhalten, die Sie uns freiwillig zur Verfügung stellen, insbesondere:",
+      "section2Item1": "Name;",
+      "section2Item2": "Telefonnummer;",
+      "section2Item3": "E-Mail-Adresse;",
+      "section2Item4": "Nachrichten, die über das Kontaktformular gesendet werden.",
+      "section2Text2": "Technische Daten, die für die korrekte Funktionsweise der Website erforderlich sind, können auch automatisch erfasst werden, wie z. B. IP-Adresse, Browsertyp, Betriebssystem und Geräteinformationen.",
+      "section3": "3. Wie wir Ihre Daten verwenden",
+      "section3Text1": "Die erhaltenen Informationen werden ausschließlich für folgende Zwecke verwendet:",
+      "section3Item1": "Bearbeitung Ihrer Anfragen;",
+      "section3Item2": "Bereitstellung von Informationen über Unternehmensprodukte;",
+      "section3Item3": "Kommunikation mit Kunden und Partnern;",
+      "section3Item4": "Verbesserung der Website-Funktionalität;",
+      "section3Item5": "Erfüllung der Anforderungen der geltenden ukrainischen Gesetzgebung.",
+      "section3Text2": "Wir verkaufen, übertragen oder verbreiten Ihre persönlichen Daten nicht an Dritte, außer in den gesetzlich vorgesehenen Fällen.",
+      "section4": "4. Schutz personenbezogener Daten",
+      "section4Text1": "Das Unternehmen {{company}} wendet moderne organisatorische und technische Maßnahmen an, um persönliche Informationen vor unbefugtem Zugriff, Änderung, Verlust oder Offenlegung zu schützen.",
+      "section4Text2": "Dennoch kann keine Methode der Datenübertragung über das Internet ein absolutes Sicherheitsniveau garantieren.",
+      "section5": "5. Ihre Rechte",
+      "section5Text": "Sie haben das Recht:",
+      "section5Item1": "Informationen über die Verarbeitung Ihrer persönlichen Daten zu erhalten;",
+      "section5Item2": "die Korrektur oder Aktualisierung Ihrer Daten zu verlangen;",
+      "section5Item3": "die Löschung personenbezogener Daten in den gesetzlich vorgesehenen Fällen zu verlangen;",
+      "section5Item4": "Ihre Zustimmung zur Verarbeitung personenbezogener Daten zu widerrufen.",
+      "section6": "6. Änderungen dieser Datenschutzrichtlinie",
+      "section6Text1": "Das Unternehmen behält sich das Recht vor, diese Datenschutzrichtlinie bei Bedarf zu ändern.",
+      "section6Text2": "Die aktuelle Version des Dokuments wird immer auf dieser Seite veröffentlicht.",
+      "section7": "7. Kontaktinformationen",
+      "section7Text": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie oder der Verarbeitung personenbezogener Daten haben, kontaktieren Sie uns bitte.",
+      "company": "PRY-PRY"
+    },
+    "cookies": {
+      "title": "Cookie-Richtlinie",
+      "section1": "1. Was sind Cookies",
+      "section1Text": "Cookies sind kleine Textdateien, die auf Ihrem Gerät während des Besuchs einer Website gespeichert werden. Sie tragen dazu bei, dass die Website ordnungsgemäß funktioniert, ihre Funktionalität verbessert wird und die Website benutzerfreundlicher wird.",
+      "section2": "2. Welche Cookies verwenden wir",
+      "section2Text": "Auf der Website {{company}} können folgende Cookie-Kategorien verwendet werden:",
+      "section2_1": "Notwendige Cookies",
+      "section2_1Text": "Diese Dateien gewährleisten die Grundfunktion der Website, ihre Sicherheit und ordnungsgemäße Funktion. Ohne diese können einzelne Website-Funktionen nicht richtig funktionieren.",
+      "section2_2": "Analyse-Cookies",
+      "section2_2Text": "Wir verwenden {{analytics}} zur Erfassung aggregierter Statistiken über Website-Besuche.",
+      "section2_2SubText": "Analyse-Cookies helfen uns zu verstehen:",
+      "section2_2Item1": "wie viele Benutzer die Website besuchen;",
+      "section2_2Item2": "welche Seiten am beliebtesten sind;",
+      "section2_2Item3": "wie Benutzer mit der Website interagieren;",
+      "section2_2Item4": "welche Bereiche verbessert werden müssen.",
+      "section2_2SubText2": "Alle Informationen werden anonymisiert verarbeitet und ausschließlich zur Entwicklung und Verbesserung der Website verwendet.",
+      "section2_3": "Funktionale Cookies",
+      "section2_3Text": "Funktionale Cookies ermöglichen es, vom Benutzer ausgewählte Einstellungen zu speichern und bieten ein komfortableres Website-Nutzungserlebnis.",
+      "section3": "3. Zustimmung zur Cookie-Nutzung",
+      "section3Text": "Bei Ihrem ersten Besuch auf der Website wird Ihnen angeboten, Ihre Zustimmung zur Cookie-Nutzung über ein entsprechendes Informationsbanner zu geben.",
+      "section3SubText": "Sie können:",
+      "section3Item1": "alle Cookies akzeptieren;",
+      "section3Item2": "optionale Cookies ablehnen;",
+      "section3Item3": "Ihre Einstellungen jederzeit ändern.",
+      "section4": "4. Verwaltung von Cookies",
+      "section4Text": "Sie können Cookies über die Einstellungen Ihres Browsers ändern oder löschen.",
+      "section4SubText": "Beachten Sie, dass das Deaktivieren technisch erforderlicher Cookies die ordnungsgemäße Funktion einzelner Website-Funktionen beeinträchtigen kann.",
+      "section5": "5. Drittanbieter-Dienste",
+      "section5Text": "Zur Analyse der Website-Besuche können wir Dienste von Drittanbietern verwenden, insbesondere:",
+      "section5Item1": "Google Analytics.",
+      "section5SubText": "Diese Dienste können gemäß ihren Datenschutzrichtlinien eigene Cookies verwenden.",
+      "section6": "6. Änderungen dieser Cookie-Richtlinie",
+      "section6Text": "Das Unternehmen {{company}} behält sich das Recht vor, diese Cookie-Richtlinie zu ändern oder zu aktualisieren.",
+      "section6SubText": "Die aktuelle Version des Dokuments ist jederzeit auf dieser Seite verfügbar.",
+      "section7": "7. Kontaktinformationen",
+      "section7Text": "Wenn Sie Fragen zur Cookie-Nutzung oder zur Verarbeitung personenbezogener Daten haben, kontaktieren Sie uns bitte.",
+      "analytics": "Google Analytics 4",
+      "company": "PRY-PRY"
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen"
+    }
+  }
+}

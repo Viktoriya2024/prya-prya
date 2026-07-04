@@ -1,13 +1,16 @@
 "use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function AboutPartners() {
+  const { t } = useTranslation();
+  const partnerNames = t("about.partners.partners", { returnObjects: true }) as string[];
   const partners = [
-    { name: "METRO", id: 1, logo: "/partners/metro.png" },
-    { name: "КЛАСС", id: 2, logo: "/partners/klass.png" },
-    { name: "Foodex", id: 3, logo: "/partners/foodex.png" },
-    { name: "Lais", id: 4, logo: "/partners/logo-leis.png" },
-    { name: "AGROSMIX  GRUP", id: 4, logo: "/partners/AGROMIX_logo.jpg" },
+    { name: partnerNames[0], id: 1, logo: "/partners/metro.png" },
+    { name: partnerNames[1], id: 2, logo: "/partners/klass.png" },
+    { name: partnerNames[2], id: 3, logo: "/partners/foodex.png" },
+    { name: partnerNames[3], id: 4, logo: "/partners/logo-leis.png" },
+    { name: partnerNames[4], id: 5, logo: "/partners/AGROMIX_logo.jpg" },
   ];
 
   return (
@@ -21,12 +24,12 @@ export default function AboutPartners() {
             
             {/* Main heading */}
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#2C1810] leading-tight tracking-tight text-center mb-2">
-              Нам довіряють
+              {t("about.partners.title")}
             </h2>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg md:text-xl text-gray-600 font-medium text-center max-w-3xl leading-relaxed">
-              Ми співпрацюємо з провідними торговими мережами та дистриб'юторами в Україні та Європі
+              {t("about.partners.description")}
             </p>
           </div>
 

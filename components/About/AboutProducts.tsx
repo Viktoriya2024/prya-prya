@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function AboutProducts() {
+  const { t } = useTranslation();
   return (
     <section 
       className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 overflow-hidden bg-[url('/feautures-patern.jpg')] bg-repeat"
@@ -16,13 +18,13 @@ export default function AboutProducts() {
           {/* TEXT CONTENT */}
           <div className="md:w-1/2 w-full space-y-4 sm:space-y-5 md:space-y-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold text-white mb-3 sm:mb-4 leading-tight tracking-tight text-center md:text-left drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
-              Наша продукція
+              {t("about.products.title")}
             </h2>
             
             <div className="w-16 sm:w-20 h-1 bg-white/90 rounded-full mx-auto md:mx-0"></div>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-white/95 leading-relaxed font-semibold whitespace-pre-line text-center md:text-left drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
-              Ми пропонуємо широкий асортимент кондитерських виробів: печиво, пряники, вафлі, зефір та багато іншого. Продукція виготовляється на найсучаснішому обладнанні провідних світових виробників. Використовуються лише екологічно чисті інгредієнти.
+              {t("about.products.description")}
             </p>
 
             {/* CTA Button */}
@@ -31,7 +33,7 @@ export default function AboutProducts() {
                 href="/products"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#FF9800] font-bold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg"
               >
-                Переглянути продукцію
+                {t("about.products.cta")}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

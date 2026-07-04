@@ -1,13 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function AboutProduction() {
-  const features = [
-    "⚙️ Сучасне обладнання",
-    "✔ Контроль якості",
-    "🌿 Натуральні інгредієнти"
-  ];
+  const { t } = useTranslation();
+  const features = t("about.production.features", { returnObjects: true }) as string[];
 
   return (
     <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 overflow-hidden bg-[#F4E8DA]">
@@ -17,13 +15,13 @@ export default function AboutProduction() {
           {/* TEXT CONTENT */}
           <div className="md:w-1/2 w-full space-y-4 sm:space-y-5 md:space-y-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold text-gray-900 mb-3 sm:mb-4 leading-tight tracking-tight text-center md:text-left">
-              Виробництво
+              {t("about.production.title")}
             </h2>
             
             <div className="w-16 sm:w-20 h-1 bg-linear-to-r from-[#FF9800] to-[#FFB74D] rounded-full mx-auto md:mx-0"></div>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-700 leading-relaxed font-semibold whitespace-pre-line text-center md:text-left">
-              Наше виробництво оснащене найсучаснішим обладнанням провідних світових виробників. Ми дотримуємось найвищих стандартів якості на всіх етапах виробничого процесу.
+              {t("about.production.description")}
             </p>
 
             {/* Features List */}
@@ -42,7 +40,7 @@ export default function AboutProduction() {
                 href="/production"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-[#FF9800] to-[#FFB74D] text-white font-bold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
               >
-                Дізнатися більше
+                {t("about.production.cta")}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

@@ -1,10 +1,24 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 export default function FeaturesSection() {
+  const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const features = [
-    { label: "СМАЧНО", icon: "/cookie1.png", description: "Незабутній смак" },
-    { label: "КОРИСНО", icon: "/health.png", description: "Натуральні інгредієнти" },
-    { label: "ЯКІСНО", icon: "/quality.png", description: "Перевірена якість" },
-    { label: "ВИГІДНО", icon: "/good.png", description: "Чесні ціни" },
+    { label: t("home.features.delicious"), icon: "/cookie1.png", description: t("home.features.deliciousDesc") },
+    { label: t("home.features.healthy"), icon: "/health.png", description: t("home.features.healthyDesc") },
+    { label: t("home.features.quality"), icon: "/quality.png", description: t("home.features.qualityDesc") },
+    { label: t("home.features.affordable"), icon: "/good.png", description: t("home.features.affordableDesc") },
   ];
+
+  if (!mounted) return null;
 
   return (
     <section className="bg-[url('/feautures-patern.jpg')] bg-repeat py-20 md:py-28">
@@ -13,7 +27,7 @@ export default function FeaturesSection() {
         {/* SECTION HEADER */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            Чому обирають нас?
+            {t("home.features.title")}
           </h2>
           <div className="w-20 h-1 bg-linear-to-r from-[#ff9800] to-[#ffb74d] rounded-full mx-auto"></div>
         </div>

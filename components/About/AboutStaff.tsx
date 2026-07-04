@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function AboutStaff() {
+  const { t } = useTranslation();
   return (
     <section className="relative py-10 sm:py-12 md:py-14 lg:py-24 xl:py-28 overflow-hidden bg-[#F4E8DA]">
       <div className="relative z-20">
@@ -10,13 +12,13 @@ export default function AboutStaff() {
           {/* TEXT CONTENT */}
           <div className="md:w-1/2 w-full space-y-4 sm:space-y-5 md:space-y-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold text-black mb-3 sm:mb-4 leading-tight tracking-tight text-center md:text-left">
-              Співробітники
+              {t("about.staff.title")}
             </h2>
             
             <div className="w-16 sm:w-20 h-1 bg-linear-to-r from-[#FF9800] to-[#FFB74D] rounded-full mx-auto md:mx-0"></div>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-black leading-relaxed font-semibold whitespace-pre-line text-center md:text-left">
-              Підприємство дбає про постійне підвищення кваліфікації співробітників. Наша команда складається з висококваліфікованих фахівців, які люблять свою справу. Ми створюємо комфортні умови праці та підтримуємо дружню атмосферу в колективі. Професіоналізм наших співробітників — запорука якості нашої продукції.
+              {t("about.staff.description")}
             </p>
           </div>
 

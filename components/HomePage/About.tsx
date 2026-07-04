@@ -2,8 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function AboutSection() {
+  const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <section id="about" className="py-20 md:py-28 bg-linear-to-b from-[#FFF8F1] to-white w-full">
       <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-12">
@@ -11,7 +22,7 @@ export default function AboutSection() {
         {/* TITLE WITH MODERN STYLING */}
         <div className="mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gray-900 font-bold mb-3 tracking-tight">
-            Про Нас
+            {t("home.about.title")}
           </h2>
           <div className="w-20 h-1 bg-linear-to-r from-[#ff9800] to-[#ffb74d] rounded-full"></div>
         </div>
@@ -25,7 +36,7 @@ export default function AboutSection() {
               <div className="relative h-80 md:h-[500px] lg:h-[550px]">
                 <Image
                   src="/about.png"
-                  alt="About LOT 40"
+                  alt={t("home.about.title")}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -37,11 +48,11 @@ export default function AboutSection() {
             {/* RIGHT TEXT CONTENT */}
             <div className="w-full md:w-1/2 p-8 md:p-10 lg:p-14 flex flex-col justify-center">
               <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 font-normal">
-                Керуючись принципом <span className="font-semibold text-[#ff9800]">«Натуральне, тому і смачне!»</span>, Ми з повною відповідальністю підходимо до вирішення поставлених перед колективом підприємства завдань, вважаючи основною стратегією забезпечення найвищої якості продукції, використовуючи тільки натуральні, екологічно чисті інгредієнти.
+                {t("home.about.description1", { slogan: t("home.about.slogan") })}
               </p>
 
               <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-10 font-light">
-                ми використовуємо передові технології у виробництві кондитерських виробів, а також традиційні рецепти приготування домашньої випічки. У рецептурі нашої продукції об'єднані кращі традиції приготування кондитерських виробів України та провідних пекарських рецептур світу.
+                {t("home.about.description2")}
               </p>
 
               {/* MODERN CTA BUTTON */}
@@ -62,7 +73,7 @@ export default function AboutSection() {
                     border border-white/20
                   "
                 >
-                  <span>Детальніше</span>
+                  <span>{t("home.about.cta")}</span>
                   <svg 
                     className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
                     fill="none" 

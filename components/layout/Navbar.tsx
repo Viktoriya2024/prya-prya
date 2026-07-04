@@ -4,19 +4,26 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const navLinks: { label: string; href: string }[] = [
-  { label: "головна", href: "/" },
-  { label: "про нас", href: "/about" },
-  { label: "продукція", href: "/products" },
-  { label: "виробництво", href: "/production" },
-  { label: "вакансії", href: "/vacancy" },
-  { label: "контакти", href: "/contact" },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const navLinks = [
+    { label: t("common.navigation.home"), href: "/" },
+    { label: t("common.navigation.about"), href: "/about" },
+    { label: t("common.navigation.products"), href: "/products" },
+    { label: t("common.navigation.production"), href: "/production" },
+    { label: t("common.navigation.vacancies"), href: "/vacancy" },
+    { label: t("common.navigation.contacts"), href: "/contact" },
+  ];
 
   useEffect(() => {
     setOpen(false);
@@ -34,10 +41,20 @@ export default function Navbar() {
     };
   }, [open]);
 
-  const isActive = (href:string) => {
+  const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
+
+  const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
+  const currentLang = i18n.language;
+  const otherLang = currentLang === 'uk' ? 'de' : 'uk';
+  const langDisplay = currentLang === 'uk' ? 'UK/DE' : 'DE/UK';
+
+  if (!mounted) return null;
 
   return (
     <>
@@ -47,7 +64,7 @@ export default function Navbar() {
           <Link
             href="/"
             className="relative z-60 flex items-center"
-            aria-label="На головну"
+            aria-label={t("common.navigation.home")}
           >
             <Image
               src="/logotransp.png"
@@ -82,9 +99,24 @@ export default function Navbar() {
 
             <button
               type="button"
-              className="ml-3 rounded-full border border-white/30 bg-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/30"
+              onClick={() => handleLanguageChange(otherLang)}
+              className="ml-3 inline-flex items-center rounded-full bg-white/20 backdrop-blur-sm border border-white/40 p-1 transition-all hover:bg-white/30 hover:border-white/60"
+              aria-label={`Switch language to ${otherLang}`}
             >
-              UKR/EN
+              <span className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
+                currentLang === 'uk' 
+                  ? 'bg-white/30 text-white shadow-md' 
+                  : 'text-white/80 hover:text-white'
+              }`}>
+                UK
+              </span>
+              <span className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
+                currentLang === 'de' 
+                  ? 'bg-white/30 text-white shadow-md' 
+                  : 'text-white/80 hover:text-white'
+              }`}>
+                DE
+              </span>
             </button>
           </nav>
 
@@ -92,69 +124,71 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((prev) => !prev)}
-            aria-label={open ? "Закрити меню" : "Відкрити меню"}
+            aria-label={open ? t("common.navigation.menu.close") : t("common.navigation.menu.open")}
             aria-expanded={open}
             className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white shadow-lg hover:bg-gray-50 active:bg-gray-100 sm:h-11 sm:w-11 lg:hidden"
           >
             <span className="relative block h-5 w-6">
               <span
-                className={`absolute left-0 top-0 h-0.5 w-6 rounded-full bg-orange-600 transition-all duration-300 ${
-                  open ? "top-2 rotate-45" : ""
+                className={`absolute block h-0.5 w-full rounded-full bg-gray-900 transition-all duration-300 ${
+                  open ? "top-2.5 rotate-45" : "top-1"
                 }`}
               />
               <span
-                className={`absolute left-0 top-2 h-0.5 w-6 rounded-full bg-orange-600 transition-all duration-300 ${
+                className={`absolute top-2.5 block h-0.5 w-full rounded-full bg-gray-900 transition-all duration-300 ${
                   open ? "opacity-0" : "opacity-100"
                 }`}
               />
               <span
-                className={`absolute left-0 top-4 h-0.5 w-6 rounded-full bg-orange-600 transition-all duration-300 ${
-                  open ? "top-2 -rotate-45" : ""
+                className={`absolute block h-0.5 w-full rounded-full bg-gray-900 transition-all duration-300 ${
+                  open ? "top-2.5 -rotate-45" : "top-4"
                 }`}
               />
             </span>
           </button>
         </div>
+
+        {/* MOBILE MENU */}
+        {open && (
+          <div className="absolute inset-x-0 top-16 z-40 bg-linear-to-b from-[#ff9800] to-[#ffb74d] border-b border-white/10 lg:hidden">
+            <nav className="flex flex-col gap-2 px-4 py-4 sm:px-6">
+              {navLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`rounded-lg px-4 py-3 text-base font-semibold text-white transition-all ${
+                    isActive(item.href)
+                      ? "bg-white/20"
+                      : "hover:bg-white/10"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <button
+                type="button"
+                onClick={() => handleLanguageChange(otherLang)}
+                className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/40 p-1 transition-all hover:bg-white/30 hover:border-white/60"
+              >
+                <span className={`flex-1 px-3 py-2 rounded-full text-sm font-bold transition-all text-center ${
+                  currentLang === 'uk' 
+                    ? 'bg-white/30 text-white shadow-md' 
+                    : 'text-white/80 hover:text-white'
+                }`}>
+                  UK
+                </span>
+                <span className={`flex-1 px-3 py-2 rounded-full text-sm font-bold transition-all text-center ${
+                  currentLang === 'de' 
+                    ? 'bg-white/30 text-white shadow-md' 
+                    : 'text-white/80 hover:text-white'
+                }`}>
+                  DE
+                </span>
+              </button>
+            </nav>
+          </div>
+        )}
       </header>
-
-      <div
-        onClick={() => setOpen(false)}
-        className={`fixed inset-0 z-40 bg-black/35 backdrop-blur-[2px] transition-opacity duration-300 lg:hidden ${
-          open
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
-        }`}
-      />
-
-      <aside
-        className={`fixed right-0 top-0 z-50 h-screen w-[85%] max-w-[360px] border-l border-white/10 bg-linear-to-b from-[#ff9800] to-[#ffb74d] px-6 pb-8 pt-24 shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <nav className="flex flex-col gap-2">
-          {navLinks.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className={`rounded-2xl px-4 py-3 text-base font-semibold capitalize text-white transition-all duration-300 ${
-                isActive(item.href)
-                  ? "bg-white/20 shadow-md"
-                  : "hover:bg-white/15"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-
-          <button
-            type="button"
-            className="mt-4 rounded-2xl border border-white/30 bg-white/20 px-4 py-3 text-left text-sm font-semibold text-white transition hover:bg-white/30"
-          >
-            UKR/EN
-          </button>
-        </nav>
-      </aside>
     </>
   );
 }

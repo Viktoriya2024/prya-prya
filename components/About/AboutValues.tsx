@@ -1,13 +1,16 @@
 "use client";
 
 import { ShieldCheck, Leaf, Star, Award } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function AboutValues() {
+  const { t } = useTranslation();
+  const valueTitles = t("about.values.titles", { returnObjects: true }) as string[];
   const values = [
-    { icon: Award, title: "Якість" },
-    { icon: Leaf, title: "Натуральність" },
-    { icon: Star, title: "Смак" },
-    { icon: ShieldCheck, title: "Безпека" },
+    { icon: Award, title: valueTitles[0] },
+    { icon: Leaf, title: valueTitles[1] },
+    { icon: Star, title: valueTitles[2] },
+    { icon: ShieldCheck, title: valueTitles[3] },
   ];
 
   return (
@@ -22,11 +25,11 @@ export default function AboutValues() {
         <div className="bg-[#fff3e6] border border-orange-100 rounded-[28px] shadow-xl px-8 py-10 text-center">
 
           <p className="text-sm uppercase tracking-[0.25em] text-orange-500 font-semibold">
-            Наш підхід
+            {t("about.values.label")}
           </p>
 
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#2b1d12]">
-            Наші цінності
+            {t("about.values.heading")}
           </h2>
 
           <div className="w-16 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
@@ -55,10 +58,7 @@ export default function AboutValues() {
           </div>
 
           <p className="max-w-2xl mx-auto mt-8 text-base text-[#5f4d3f] leading-relaxed">
-            Ми з повною відповідальністю підходимо до кожного етапу роботи та
-            прагнемо до того, щоб наша продукція дарувала споживачам
-            бездоганний смак, стабільну якість і впевненість у безпеці
-            кожного виробу.
+            {t("about.values.description")}
           </p>
 
         </div>

@@ -489,5 +489,148 @@
     "noProducts": "Keine Produkte",
     "noProductsDesc": "Entschuldigung, in dieser Kategorie sind noch keine Produkte verfügbar",
     "backToProducts": "Zurück zu den Produkten"
+  },
+  "vacancy": {
+    "hero": {
+      "eyebrow": "KARRIERE BEI PRYA-PRYA",
+      "title": "Treten Sie dem Prya-Prya Team bei",
+      "description": "Während unserer Expansion suchen wir motivierte Fachleute für unser wachsendes Team. Entwickeln Sie Ihre Karriere mit einem der führenden Süßwarenhersteller der Ukraine.",
+      "cta": "Offene Positionen anzeigen",
+      "benefit1": "✓ Sichere Anstellung",
+      "benefit2": "✓ Moderne Produktionsanlagen",
+      "benefit3": "✓ Karrieremöglichkeiten"
+    },
+    "positions": {
+      "eyebrow": "OFFENE STELLEN",
+      "title": "Treten Sie unserem Team bei",
+      "description": "Finden Sie die perfekte Position in unserem Unternehmen. Wir bieten wettbewerbsfähige Arbeitsbedingungen und Entwicklungsmöglichkeiten.",
+      "noPositions": "Keine verfügbaren Stellen",
+      "noPositionsDesc": "Derzeit haben wir keine freien Positionen. Bitte überprüfen Sie diese Seite später erneut oder kontaktieren Sie uns.",
+      "applyButton": "Bewerbung einreichen",
+      "contactButton": "Kontaktieren Sie uns",
+      "items": [
+        {
+          "icon": "🏭",
+          "title": "Produktionsleiter",
+          "intro": "Im Zuge der Expansion der Süßwarenfabrik \"Prya-Prya\" suchen wir engagierte Fachleute für unser Team.",
+          "department": "Produktion",
+          "location": "Ukraine",
+          "type": "Vollzeitposition",
+          "requirements": [
+            "Mindestens 5 Jahre Erfahrung in ähnlicher Produktionsumgebung",
+            "Erfahrung in der Verwaltung von Produktionspersonal",
+            "Verantwortungsbewusstsein, Organisationsfähigkeit und Führungsqualitäten"
+          ],
+          "responsibilities": [
+            "Organisation und Kontrolle aller Phasen des Produktionsprozesses",
+            "Einführung neuer Produktionstechnologien",
+            "Gewährleistung effizienter Produktion"
+          ]
+        },
+        {
+          "icon": "⚗️",
+          "title": "Technologe",
+          "intro": "Im Zuge der Expansion der Süßwarenfabrik \"Prya-Prya\" suchen wir engagierte Fachleute für unser Team.",
+          "department": "Produktion",
+          "location": "Ukraine",
+          "type": "Vollzeitposition",
+          "requirements": [
+            "Mindestens 5 Jahre Erfahrung in der Süßwarenbranche",
+            "Kenntnisse moderner Süßwarenproduktionstechnologien",
+            "Sorgfalt im Detail und verantwortungsvolles Arbeitsverhalten"
+          ],
+          "responsibilities": [
+            "Arbeit mit Rohstoffen",
+            "Entwicklung und Umsetzung traditioneller und neuer Rezepte",
+            "Kontrolle der Einhaltung technologischer Prozesse",
+            "Gewährleistung konsistent hoher Produktqualität"
+          ]
+        },
+        {
+          "icon": "⚙️",
+          "title": "Maschinenbauingenieur",
+          "intro": "Im Zuge der Expansion der Süßwarenfabrik \"Prya-Prya\" suchen wir engagierte Fachleute für unser Team.",
+          "department": "Technische Abteilung",
+          "location": "Ukraine",
+          "type": "Vollzeitposition",
+          "requirements": [
+            "Mindestens 5 Jahre Erfahrung in der Wartung von Produktionsanlagen in Lebensmittelunternehmen",
+            "Kenntnis der Funktionsweise von Industrieanlagen",
+            "Verantwortung und Fähigkeit, technische Probleme schnell zu lösen"
+          ],
+          "responsibilities": [
+            "Sicherung des reibungslosen Betriebs der Produktionsanlagen",
+            "Technische Wartung und Reparatur von Ausrüstungen",
+            "Überwachung des technischen Zustands von Produktionslinien und sonstigen Geräten"
+          ]
+        },
+        {
+          "icon": "💼",
+          "title": "Regionalmanager",
+          "intro": "Im Zuge der Expansion der Süßwarenfabrik \"Prya-Prya\" suchen wir engagierte Fachleute für unser Team.",
+          "department": "Vertrieb",
+          "location": "Ukraine",
+          "type": "Vollzeitposition",
+          "requirements": [
+            "Mindestens 1 Jahr Erfahrung im Vertrieb",
+            "Verhandlungs- und Kundenbetreuungsfähigkeiten",
+            "Kommunikationsfähigkeit, Verantwortung und Ergebnisorientierung"
+          ],
+          "responsibilities": [
+            "Entwicklung eines regionalen Vertriebsnetzwerks",
+            "Gewinnung neuer Kunden und Pflege langfristiger Geschäftsbeziehungen",
+            "Erfüllung von Verkaufszielen",
+            "Führung von Verhandlungen und Präsentation von Produkten des Unternehmens"
+          ]
+        }
+      ],
+      "requirementsLabel": "Anforderungen",
+      "responsibilitiesLabel": "Hauptaufgaben"
+    },
+    "benefits": {
+      "eyebrow": "",
+      "title": "",
+      "description": "",
+      "items": [
+        {
+          "icon": "🇺🇦",
+          "title": "Stabiler ukrainischer Hersteller",
+          "description": "Lokales Unternehmen mit jahrelanger Erfahrung in Qualität"
+        },
+        {
+          "icon": "⚙️",
+          "title": "Moderne Produktion",
+          "description": "Modernste Ausrüstung und technologische Prozesse"
+        },
+        {
+          "icon": "👥",
+          "title": "Freundliches Team",
+          "description": "Eine Familie von Profis, vereint durch die Liebe zum Handwerk"
+        },
+        {
+          "icon": "📚",
+          "title": "Berufliche Entwicklung",
+          "description": "Möglichkeiten zum Lernen und beruflichen Wachstum"
+        },
+        {
+          "icon": "⭐",
+          "title": "Hochwertige Produkte",
+          "description": "Produkte, auf die wir stolz sind und denen wir vertrauen"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Möchten Sie unserem Team beitreten?",
+      "description": "Schicken Sie uns Ihren Lebenslauf und werden Sie Teil von Prya-Prya.",
+      "email": {
+        "label": "📧 Email",
+        "value": "careers@pryaprya.com"
+      },
+      "phone": {
+        "label": "📞 Telefon",
+        "value": "+38 (0) 123 456 789"
+      },
+      "button": "Jetzt bewerben"
+    }
   }
 }

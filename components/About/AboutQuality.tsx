@@ -24,14 +24,21 @@ export default function AboutQuality() {
 
           {/* CERTIFICATE CARD */}
           <div className="md:w-1/2 w-full">
-            <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-[#FFF3E6] p-8 border-8 border-orange-200 hover:shadow-3xl transition-all duration-500">
+            <a
+              href="/certificate-iso22000-2026.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={t("about.quality.imageAlt")}
+              className="relative block w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-[#FFF3E6] p-8 border-8 border-orange-200 hover:shadow-3xl transition-all duration-500"
+            >
               <Image
-                src="/Sertificate.png"
+                src="/certificate-iso22000-2026.jpg"
                 alt={t("about.quality.imageAlt")}
                 fill
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-contain p-4 hover:scale-105 transition-transform duration-700"
               />
-            </div>
+            </a>
           </div>
 
         </div>

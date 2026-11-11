@@ -32,5 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...categoryPages, ...productPages];
+  const all = [...staticPages, ...categoryPages, ...productPages];
+  // data/products.ts has a few duplicate entries; list each URL once
+  return all.filter((e, i) => all.findIndex((x) => x.url === e.url) === i);
 }
